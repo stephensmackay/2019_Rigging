@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
 //Name: SpiderBot08.ma
-//Last modified: Tue, Mar 24, 2020 06:45:16 PM
+//Last modified: Tue, Mar 24, 2020 07:48:13 PM
 //Codeset: 1252
 requires maya "2020";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "4.0.0";
@@ -11,7 +11,7 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "CCEE796C-4228-254F-18BE-8FB3004E4BB9";
+fileInfo "UUID" "1C932327-4F8B-F3DE-2E72-E5A99B1D7CDF";
 createNode transform -s -n "persp";
 	rename -uid "2C7FB34D-47D8-3F54-99F3-53B1CD23A427";
 	setAttr ".v" no;
@@ -80,7 +80,9 @@ createNode camera -s -n "sideShape" -p "side";
 	setAttr ".hc" -type "string" "viewSet -s %camera";
 	setAttr ".o" yes;
 	setAttr ".ai_translator" -type "string" "orthographic";
-createNode transform -n "SpiderBot_Geo";
+createNode transform -n "Spider_Bot";
+	rename -uid "9B233B87-4CB6-1E38-AF3F-DFA65A1C9F78";
+createNode transform -n "SpiderBot_Geo" -p "Spider_Bot";
 	rename -uid "F2CAA3E9-490A-8544-C9A0-779B5ED7B625";
 	setAttr ".rp" -type "double3" 5.5193775838561123 7.8154968832095619 -1.7727282004878839 ;
 	setAttr ".sp" -type "double3" 5.5193775838561123 7.8154968832095619 -1.7727282004878839 ;
@@ -1314,7 +1316,7 @@ createNode parentConstraint -n "L_01_Toe_01_parentConstraint1" -p "L_01_Toe_01";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 3.7280056060510818 -0.41767373144742942 -4.3559623377374193 ;
 	setAttr ".tg[0].tor" -type "double3" -0.1397790262431608 -9.8005987468197624 154.94139436523841 ;
-	setAttr ".lr" -type "double3" 9.7448850892688537 14.413719365876204 -4.1433822686579243 ;
+	setAttr ".lr" -type "double3" -1.5902773407317584e-14 -4.4139062980501588e-30 -3.1805546814635168e-14 ;
 	setAttr ".rst" -type "double3" 0 4.4408920985006262e-16 4.4408920985006262e-16 ;
 	setAttr ".rsrr" -type "double3" -1.5902773407317584e-14 -4.4139062980501588e-30 
 		-3.1805546814635168e-14 ;
@@ -1503,7 +1505,7 @@ createNode parentConstraint -n "L_01_Toe_02_parentConstraint1" -p "L_01_Toe_02";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 2.1780641251855157 0.31934861644879359 5.5002453652395404 ;
 	setAttr ".tg[0].tor" -type "double3" 179.44658308171745 75.034271965533577 -25.390301681007777 ;
-	setAttr ".lr" -type "double3" 9.7448850892689123 14.413719365876178 -4.143382268657918 ;
+	setAttr ".lr" -type "double3" 4.7708320221952748e-14 2.648343778830095e-30 -6.3611093629270335e-15 ;
 	setAttr ".rst" -type "double3" -8.8817841970012523e-16 0 -8.8817841970012484e-16 ;
 	setAttr ".rsrr" -type "double3" 4.7708320221952748e-14 2.6483437788300953e-30 -6.3611093629270335e-15 ;
 	setAttr -k on ".w0";
@@ -1690,7 +1692,7 @@ createNode parentConstraint -n "L_01_Toe_03_parentConstraint1" -p "L_01_Toe_03";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -5.7096189696965229 3.5416948152323324 -0.85960434290502075 ;
 	setAttr ".tg[0].tor" -type "double3" 179.99605289709947 -45.008610841509643 -21.098184375336675 ;
-	setAttr ".lr" -type "double3" 9.7448850892688785 14.41371936587619 -4.1433822686579012 ;
+	setAttr ".lr" -type "double3" -3.180554681463516e-15 1.9083328088781101e-14 6.3611093629270335e-15 ;
 	setAttr ".rst" -type "double3" 0 8.8817841970012523e-16 -8.8817841970012484e-16 ;
 	setAttr ".rsrr" -type "double3" -3.180554681463516e-15 1.9083328088781101e-14 6.3611093629270335e-15 ;
 	setAttr -k on ".w0";
@@ -1711,7 +1713,7 @@ createNode parentConstraint -n "L_01_Calf_parentConstraint1" -p "L_01_Calf";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 11.354435197764717 6.1467474267981732 -0.81576145162279379 ;
 	setAttr ".tg[0].tor" -type "double3" 179.99717237714222 -45.252138350674393 -88.492124599997894 ;
-	setAttr ".lr" -type "double3" -10.621278560203853 0.99008930059560618 10.562178864958705 ;
+	setAttr ".lr" -type "double3" -1.1131941385122315e-14 6.3611093629270367e-15 -9.541664044390555e-15 ;
 	setAttr ".rst" -type "double3" 1.3322676295501878e-15 1.7763568394002505e-15 -1.2212453270876722e-15 ;
 	setAttr ".rsrr" -type "double3" -1.1131941385122315e-14 6.3611093629270367e-15 -9.541664044390555e-15 ;
 	setAttr -k on ".w0";
@@ -1748,7 +1750,7 @@ createNode parentConstraint -n "L_01_Thigh_parentConstraint1" -p "L_01_Thigh";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -5.8098206106016788 8.1619648698461464 -0.78912100356404147 ;
 	setAttr ".tg[0].tor" -type "double3" -179.99124126708014 -45.007235747258925 23.854471141796626 ;
-	setAttr ".lr" -type "double3" 2.2707406464713071 -14.262556017354523 -4.2083684260354328 ;
+	setAttr ".lr" -type "double3" -3.1805546814635176e-15 -6.3611093629270335e-15 9.5416640443905503e-15 ;
 	setAttr ".rst" -type "double3" -1.3322676295501878e-15 0 -5.5511151231257827e-16 ;
 	setAttr ".rsrr" -type "double3" -3.1805546814635176e-15 -6.3611093629270335e-15 
 		3.1805546814635176e-15 ;
@@ -3463,7 +3465,7 @@ createNode parentConstraint -n "L_02_Thigh_parentConstraint1" -p "L_02_Thigh";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -2.5763973018070674 10.924445217698779 -0.79068839830905424 ;
 	setAttr ".tg[0].tor" -type "double3" 179.98178702991447 0.051594969014059404 4.2929898350533842 ;
-	setAttr ".lr" -type "double3" 8.7240861521129798 -30.659933053766505 -2.835362343549849 ;
+	setAttr ".lr" -type "double3" -9.2256274830244222e-15 2.484808344893244e-17 -1.5902773407317578e-14 ;
 	setAttr ".rst" -type "double3" -4.9303806576313238e-32 0 0 ;
 	setAttr ".rsrr" -type "double3" -9.2147564465155128e-15 3.7272125173400834e-17 3.180554681463516e-15 ;
 	setAttr -k on ".w0";
@@ -4695,7 +4697,7 @@ createNode parentConstraint -n "L_03_Toe_01_parentConstraint1" -p "L_03_Toe_01";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 3.7461211450141687 -0.39318486699666511 -6.633670239681094 ;
 	setAttr ".tg[0].tor" -type "double3" 179.88979544571873 -65.135018646758255 -25.058231074724134 ;
-	setAttr ".lr" -type "double3" 15.675460684840498 44.35065075964711 20.249839054982118 ;
+	setAttr ".lr" -type "double3" 11.059689634902792 38.161189085901626 17.495362954679084 ;
 	setAttr ".rst" -type "double3" 0 2.2204460492503131e-16 0 ;
 	setAttr ".rsrr" -type "double3" 4.4527765540489235e-14 -9.5416640443905535e-15 6.3611093629270304e-15 ;
 	setAttr -k on ".w0";
@@ -4899,7 +4901,7 @@ createNode parentConstraint -n "L_03_Toe_02_parentConstraint1" -p "L_03_Toe_02";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 4.0698027460820319 -0.48046863995515698 6.4604942143720638 ;
 	setAttr ".tg[0].tor" -type "double3" 0.039096463310372927 0.043250561645799344 155.5732844199328 ;
-	setAttr ".lr" -type "double3" 15.675460684840477 44.350650759647131 20.249839054982125 ;
+	setAttr ".lr" -type "double3" 11.059689634902801 38.161189085901569 17.49536295467913 ;
 	setAttr ".rst" -type "double3" -4.4408920985006262e-16 -4.4408920985006262e-16 -8.8817841970012523e-16 ;
 	setAttr ".rsrr" -type "double3" 3.1805546814635168e-15 3.1805546814635164e-15 1.2722218725854067e-14 ;
 	setAttr -k on ".w0";
@@ -5102,7 +5104,7 @@ createNode parentConstraint -n "L_03_Toe_03_parentConstraint1" -p "L_03_Toe_03";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -7.6791756115254337 3.7748528066093376 -0.44490812594580881 ;
 	setAttr ".tg[0].tor" -type "double3" -179.86608758219523 53.923087107040608 -17.321519317696588 ;
-	setAttr ".lr" -type "double3" 15.675460684840465 44.350650759647095 20.249839054982125 ;
+	setAttr ".lr" -type "double3" 11.059689634902783 38.161189085901583 17.49536295467912 ;
 	setAttr ".rst" -type "double3" -8.8817841970012523e-16 8.8817841970012563e-16 0 ;
 	setAttr ".rsrr" -type "double3" -2.5444437451708134e-14 -2.8249000307521015e-30 
 		-1.2722218725854067e-14 ;
@@ -5140,7 +5142,7 @@ createNode parentConstraint -n "L_03_Calf_parentConstraint1" -p "L_03_Calf";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 10.834077708625543 8.0420786364958374 0.79785285921745375 ;
 	setAttr ".tg[0].tor" -type "double3" 0.17081080544121105 117.67639377733089 96.066348275717814 ;
-	setAttr ".lr" -type "double3" -11.601885728912809 -0.65504608974664824 -6.4649046697375603 ;
+	setAttr ".lr" -type "double3" -25.242816743596766 -3.2329460481877015 -13.849738275714436 ;
 	setAttr ".rst" -type "double3" -8.8817841970012523e-16 -3.5527136788005017e-15 0 ;
 	setAttr ".rsrr" -type "double3" -5.2966875576601938e-31 -1.9083328088781107e-14 
 		3.1805546814635176e-15 ;
@@ -5178,7 +5180,7 @@ createNode parentConstraint -n "L_03_Thigh_parentConstraint1" -p "L_03_Thigh";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.40018631700748902 12.697891088600278 0.56640123896522976 ;
 	setAttr ".tg[0].tor" -type "double3" 179.93792531971181 60.584888916393638 -10.895923456836895 ;
-	setAttr ".lr" -type "double3" 3.0706571898544146 -46.545804196053275 -3.6481042342033447 ;
+	setAttr ".lr" -type "double3" -6.1543733086316586e-13 2.6016937294371621e-12 1.0797983143568496e-12 ;
 	setAttr ".rst" -type "double3" -4.9303806576313238e-32 1.7763568394002505e-15 0 ;
 	setAttr ".rsrr" -type "double3" -1.1131941385122306e-14 -1.2722218725854064e-14 
 		1.2358937634540437e-30 ;
@@ -6395,7 +6397,7 @@ createNode parentConstraint -n "R_01_Toe_01_parentConstraint1" -p "R_01_Toe_01";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -3.7279847045758232 0.41766363730417255 4.3559826163081787 ;
 	setAttr ".tg[0].tor" -type "double3" 179.86029531995356 -9.8008309641566402 154.94148648676773 ;
-	setAttr ".lr" -type "double3" 10.756637792293933 -9.4069942129607416 4.3920365031769233 ;
+	setAttr ".lr" -type "double3" 10.434811054183266 -11.256470525231267 5.414837222895537 ;
 	setAttr ".rst" -type "double3" -8.8817841970012543e-16 2.2204460492503131e-16 8.8817841970012523e-16 ;
 	setAttr ".rsrr" -type "double3" -1.2722218725854067e-14 3.1805546814635168e-15 -1.5902773407317588e-15 ;
 	setAttr -k on ".w0";
@@ -6598,7 +6600,7 @@ createNode parentConstraint -n "R_01_Toe_02_parentConstraint1" -p "R_01_Toe_02";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -2.1780917987263351 -0.31934206316261338 -5.5002322097374821 ;
 	setAttr ".tg[0].tor" -type "double3" -0.55367275611407041 75.034503521207355 -25.390659689418705 ;
-	setAttr ".lr" -type "double3" 10.756637792293915 -9.4069942129607043 4.3920365031769375 ;
+	setAttr ".lr" -type "double3" 10.434811054183264 -11.256470525231249 5.4148372228955761 ;
 	setAttr ".rst" -type "double3" 0 -2.2204460492503131e-16 -4.4408920985006262e-16 ;
 	setAttr ".rsrr" -type "double3" 0 0 7.9513867036587919e-15 ;
 	setAttr -k on ".w0";
@@ -6801,7 +6803,7 @@ createNode parentConstraint -n "R_01_Toe_03_parentConstraint1" -p "R_01_Toe_03";
 	setAttr ".tg[0].tot" -type "double3" 5.7096229046295477 -3.5416989721552046 0.85957449132814334 ;
 	setAttr ".tg[0].tor" -type "double3" -0.0037668227560412929 -45.008378409535162 
 		-21.098311993229178 ;
-	setAttr ".lr" -type "double3" 10.756637792293928 -9.4069942129607256 4.3920365031769322 ;
+	setAttr ".lr" -type "double3" 10.434811054183255 -11.256470525231258 5.4148372228955512 ;
 	setAttr ".rst" -type "double3" 8.8817841970012543e-16 -4.4408920985006262e-16 8.8817841970012523e-16 ;
 	setAttr ".rsrr" -type "double3" -3.1805546814635164e-15 1.9083328088781101e-14 1.5902773407317578e-15 ;
 	setAttr -k on ".w0";
@@ -6838,7 +6840,7 @@ createNode parentConstraint -n "R_01_Calf_parentConstraint1" -p "R_01_Calf";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -11.354462459955869 -6.1467492416855833 0.81573697239573895 ;
 	setAttr ".tg[0].tor" -type "double3" -0.0026465768040392548 -45.25190591694264 -88.492252757496047 ;
-	setAttr ".lr" -type "double3" -11.28550198277199 -1.118611447937621 -11.22303646815698 ;
+	setAttr ".lr" -type "double3" -9.1342799234907037 -0.73156938186247344 -9.084039808492836 ;
 	setAttr ".rst" -type "double3" -6.6613381477509392e-16 0 -1.6653345369377348e-15 ;
 	setAttr ".rsrr" -type "double3" -1.5902773407317578e-15 1.4312496066585827e-14 4.7708320221952752e-15 ;
 	setAttr -k on ".w0";
@@ -6875,7 +6877,7 @@ createNode parentConstraint -n "R_01_Thigh_parentConstraint1" -p "R_01_Thigh";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 5.8098244727201314 -8.1619613107848181 0.78907999590280042 ;
 	setAttr ".tg[0].tor" -type "double3" 0.009051447060472043 -45.007006347675826 23.854264179926311 ;
-	setAttr ".lr" -type "double3" 1.5883868944094111 9.3745470062250735 5.2408228125757921 ;
+	setAttr ".lr" -type "double3" -3.3080949241929859e-11 -9.6358084629609179e-11 3.3074985701902122e-11 ;
 	setAttr ".rst" -type "double3" -2.2204460492503136e-16 3.5527136788005009e-15 7.7715611723760958e-16 ;
 	setAttr ".rsrr" -type "double3" 6.2070557316330362e-33 -1.987846675914698e-16 -3.5781240166464568e-15 ;
 	setAttr -k on ".w0";
@@ -8091,7 +8093,7 @@ createNode parentConstraint -n "R_02_Toe_01_parentConstraint1" -p "R_02_Toe_01";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -4.5030330166308161 1.0548277890691096 5.6905284854128979 ;
 	setAttr ".tg[0].tor" -type "double3" -178.31979599119808 -54.670963451807296 151.75722215971714 ;
-	setAttr ".lr" -type "double3" 9.0117805107252327 -13.270235791210499 0.72792828221518058 ;
+	setAttr ".lr" -type "double3" -8.4323729185860879e-11 1.0894573855955486e-10 -2.972735952810624e-13 ;
 	setAttr ".rst" -type "double3" 3.9443045261050599e-31 2.2204460492503052e-16 6.6613381477509392e-16 ;
 	setAttr ".rsrr" -type "double3" -8.7092532488512705e-15 2.7643492836938767e-16 4.5892517405073917e-18 ;
 	setAttr -k on ".w0";
@@ -8294,7 +8296,7 @@ createNode parentConstraint -n "R_02_Toe_02_parentConstraint1" -p "R_02_Toe_02";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -2.6640005646558973 -0.12739010298351103 -6.9163345709707986 ;
 	setAttr ".tg[0].tor" -type "double3" -178.68203827741573 62.236426364358401 156.17573027772963 ;
-	setAttr ".lr" -type "double3" 9.0117805107251971 -13.27023579121045 0.72792828221515637 ;
+	setAttr ".lr" -type "double3" -8.4324369024009675e-11 1.0895144430071685e-10 -2.6546863235999454e-13 ;
 	setAttr ".rst" -type "double3" 3.9443045261050599e-31 2.2204460492503052e-16 4.4408920985006262e-16 ;
 	setAttr ".rsrr" -type "double3" 4.0875097273495963e-15 4.8391642516798426e-15 6.3581474301282182e-15 ;
 	setAttr -k on ".w0";
@@ -8496,7 +8498,7 @@ createNode parentConstraint -n "R_02_Toe_03_parentConstraint1" -p "R_02_Toe_03";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 7.1998613858806104 -4.2765247468445997 0.55768237699337042 ;
 	setAttr ".tg[0].tor" -type "double3" -0.67254474678127396 1.5419384393458584 -21.893253164178152 ;
-	setAttr ".lr" -type "double3" 9.0117805107252025 -13.270235791210476 0.72792828221513417 ;
+	setAttr ".lr" -type "double3" -8.4334003868367006e-11 1.0894389980137964e-10 -2.8454561041671132e-13 ;
 	setAttr ".rst" -type "double3" 3.9443045261050599e-31 1.1102230246251561e-15 0 ;
 	setAttr ".rsrr" -type "double3" 3.4166114742283871e-16 1.8636062586700297e-16 -1.2722431050785882e-14 ;
 	setAttr -k on ".w0";
@@ -8534,7 +8536,7 @@ createNode parentConstraint -n "R_02_Calf_parentConstraint1" -p "R_02_Calf";
 	setAttr ".tg[0].tot" -type "double3" -10.238028306046475 -7.7714510766096883 0.79506579254904119 ;
 	setAttr ".tg[0].tor" -type "double3" 0.018631072988327068 -0.060957248414736438 
 		-80.297163109227355 ;
-	setAttr ".lr" -type "double3" 0.0010794592474058472 -0.0039985546820189653 -5.7065526751266598 ;
+	setAttr ".lr" -type "double3" -8.4334324563944027e-11 1.0894374100659635e-10 -2.791307316622363e-13 ;
 	setAttr ".rst" -type "double3" 1.7763568394002505e-15 -3.5527136788005009e-15 3.3306690738754696e-16 ;
 	setAttr ".rsrr" -type "double3" 9.7062825972397351e-18 3.7854502129234972e-17 -4.7708214059486844e-15 ;
 	setAttr -k on ".w0";
@@ -8572,7 +8574,7 @@ createNode parentConstraint -n "R_02_Thigh_parentConstraint1" -p "R_02_Thigh";
 	setAttr ".tg[0].tot" -type "double3" 2.5764081659416771 -10.924443400043256 0.79059269722242209 ;
 	setAttr ".tg[0].tor" -type "double3" -0.017820637422623901 0.052242341616007361 
 		4.2929895395910878 ;
-	setAttr ".lr" -type "double3" -8.0751533846117525 13.858067552186659 2.9450327048131775 ;
+	setAttr ".lr" -type "double3" -8.4287997641861292e-11 1.0893584259192996e-10 -2.6889642956656684e-13 ;
 	setAttr ".rst" -type "double3" -4.9303806576313238e-32 0 1.1102230246251565e-16 ;
 	setAttr ".rsrr" -type "double3" -9.3180312933501468e-18 1.2763761615370253e-17 2.3854084280643583e-15 ;
 	setAttr -k on ".w0";
@@ -10268,7 +10270,7 @@ createNode parentConstraint -n "R_03_Thigh_parentConstraint1" -p "R_03_Thigh";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.40017827629754116 -12.697933712060586 -0.56637724150503299 ;
 	setAttr ".tg[0].tor" -type "double3" -0.062259951979382118 60.584695289167279 -10.896085058259317 ;
-	setAttr ".lr" -type "double3" -2.2339621457513523 31.497574261474998 -1.4680503255503807 ;
+	setAttr ".lr" -type "double3" -2.8855582347580383e-12 5.962695192906703e-12 -5.0499256954938492e-12 ;
 	setAttr ".rst" -type "double3" 2.2204460492503126e-16 -1.7763568394002505e-15 4.4408920985006262e-16 ;
 	setAttr ".rsrr" -type "double3" -1.5902773407317584e-15 6.4605016967227685e-15 1.1927080055488186e-15 ;
 	setAttr -k on ".w0";
@@ -11192,7 +11194,7 @@ createNode scaleConstraint -n "Abdomen_Grp_scaleConstraint1" -p "Abdomen_Grp";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -k on ".w0";
-createNode transform -n "Skeleton";
+createNode transform -n "Skeleton" -p "Spider_Bot";
 	rename -uid "CB04D6D9-43FD-889C-EE82-388434C984C7";
 	setAttr ".v" no;
 createNode joint -n "Transform_Jnt" -p "Skeleton";
@@ -11257,7 +11259,7 @@ createNode parentConstraint -n "L_01_Jnt_04_parentConstraint1" -p "L_01_Jnt_04";
 	setAttr ".tg[0].tot" -type "double3" 0 -4.4408920985006262e-16 -8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 2.3729919693731707e-14 3.0314661807699147e-15 
 		-1.3101734375406143e-14 ;
-	setAttr ".lr" -type "double3" -3.2672583967454414 -14.050386098364637 11.456360091174375 ;
+	setAttr ".lr" -type "double3" -2.5295348951014532e-14 3.2054027649124533e-15 1.2775020903183051e-14 ;
 	setAttr ".rst" -type "double3" 0.12248773560395709 -0.48190500746833731 0.071849468262064287 ;
 	setAttr ".rsrr" -type "double3" -2.3705071610282775e-14 -3.0811623476677794e-15 
 		1.2767013220040328e-14 ;
@@ -11302,7 +11304,7 @@ createNode parentConstraint -n "L_01_Jnt_05_parentConstraint1" -p "L_01_Jnt_05";
 	setAttr ".tg[0].tot" -type "double3" 4.4408920985006262e-16 -3.3306690738754696e-16 
 		8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 1.9083328088781101e-14 0 0 ;
-	setAttr ".lr" -type "double3" -15.729809755961268 -8.428366097161021 -2.4177551834515079 ;
+	setAttr ".lr" -type "double3" -2.5444437451708134e-14 -3.1805546814635247e-15 -3.1805546814635168e-14 ;
 	setAttr ".rst" -type "double3" 0.15354487533269445 0.50898723571805249 -0.39984426740784085 ;
 	setAttr ".rsrr" -type "double3" -2.0673605429512861e-14 -1.2722218725854067e-14 
 		2.2952312749860834e-30 ;
@@ -11349,7 +11351,7 @@ createNode parentConstraint -n "L_01_Jnt_06_parentConstraint1" -p "L_01_Jnt_06";
 		8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 6.3611093629270304e-15 6.361109362927032e-15 
 		-3.4986101496098681e-14 ;
-	setAttr ".lr" -type "double3" 2.41231983561025 -15.869899739208781 -8.8427936175163087 ;
+	setAttr ".lr" -type "double3" 6.3611093629270296e-15 -1.2722218725854067e-14 2.5444437451708128e-14 ;
 	setAttr ".rst" -type "double3" 0.15554373556015189 0.43628312982855277 0.36906381586749304 ;
 	setAttr ".rsrr" -type "double3" -1.4312496066585827e-14 -6.361109362927028e-15 3.1805546814635155e-14 ;
 	setAttr -k on ".w0";
@@ -11423,7 +11425,7 @@ createNode joint -n "L_02_Jnt_01" -p "Abdoment_Jnt";
 createNode joint -n "L_02_Jnt_02" -p "L_02_Jnt_01";
 	rename -uid "C00EB784-4EE5-8496-97CD-5FBBF6820CDB";
 	setAttr ".t" -type "double3" 4.1967170547423231 -9.5187832485556776e-16 1.2131877779021588e-15 ;
-	setAttr ".r" -type "double3" -1.6929978169318945e-16 -0.0063404655560719315 1.2417179761231166e-05 ;
+	setAttr ".r" -type "double3" -3.5193342309762441e-16 -0.013180299022622676 -5.3937685439929339 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -11627,7 +11629,7 @@ createNode joint -n "L_03_Jnt_01" -p "Abdoment_Jnt";
 createNode joint -n "L_03_Jnt_02" -p "L_03_Jnt_01";
 	rename -uid "0B88D702-49D9-0CBF-8192-48B43FAA7E03";
 	setAttr ".t" -type "double3" 4.1967245278562073 -4.3707614112042161e-16 1.4124068906643348e-15 ;
-	setAttr ".r" -type "double3" -2.3576748021781972e-16 0.11097672526397996 0.0034518462025353029 ;
+	setAttr ".r" -type "double3" 1.2173561707763664e-15 -0.74330329626470781 29.246328619942499 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -1.7408638084222896 -0.18086894643509574 73.243310926085201 ;
@@ -11665,7 +11667,7 @@ createNode parentConstraint -n "L_03_Jnt_04_parentConstraint1" -p "L_03_Jnt_04";
 		-9.4368957093138306e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -7.5538173684758504e-15 -3.1805546814635168e-15 
 		6.8580710319057077e-15 ;
-	setAttr ".lr" -type "double3" -18.319824104124521 -43.416746874568915 -6.7797744456428228 ;
+	setAttr ".lr" -type "double3" -17.866473551179016 -36.380403047582554 -6.1960057213516251 ;
 	setAttr ".rst" -type "double3" 0.15738294303480826 -0.47877149122670559 0.0024117095581666081 ;
 	setAttr ".rsrr" -type "double3" 7.5538173684758519e-15 -3.9756933518293881e-16 -1.227495322377326e-14 ;
 	setAttr -k on ".w0";
@@ -11710,7 +11712,7 @@ createNode parentConstraint -n "L_03_Jnt_05_parentConstraint1" -p "L_03_Jnt_05";
 		0 ;
 	setAttr ".tg[0].tor" -type "double3" 6.3611093629270335e-15 -1.5902773407317584e-14 
 		-9.5416640443905503e-15 ;
-	setAttr ".lr" -type "double3" -8.7290373197764239 -47.786620048888445 4.7475166963360484 ;
+	setAttr ".lr" -type "double3" -4.5032129180899636 -41.484735495075775 0.47741492997542267 ;
 	setAttr ".rst" -type "double3" 0.11298055669182117 0.52497160135187126 -0.41355735987366704 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629270327e-15 9.5416640443905503e-15 6.3611093629270327e-15 ;
 	setAttr -k on ".w0";
@@ -11755,7 +11757,7 @@ createNode parentConstraint -n "L_03_Jnt_06_parentConstraint1" -p "L_03_Jnt_06";
 		8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 1.1131941385122312e-14 -2.544443745170814e-14 
 		2.544443745170814e-14 ;
-	setAttr ".lr" -type "double3" -34.042419254585489 -33.799396969709242 24.482253729844786 ;
+	setAttr ".lr" -type "double3" -26.987324878077604 -29.994806433401415 21.039771439226666 ;
 	setAttr ".rst" -type "double3" 0.12381511671992496 0.41922615977908606 0.33407306041811213 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629270375e-15 2.2263882770244621e-14 -1.9083328088781101e-14 ;
 	setAttr -k on ".w0";
@@ -11829,7 +11831,7 @@ createNode joint -n "R_01_Jnt_01" -p "Abdoment_Jnt";
 createNode joint -n "R_01_Jnt_02" -p "R_01_Jnt_01";
 	rename -uid "342D1D8A-45BB-0D8B-F62E-AE9DAE1B1976";
 	setAttr ".t" -type "double3" -4.1967251061811854 2.9116951967722571e-05 -8.5253145787334006e-07 ;
-	setAttr ".r" -type "double3" 1.2480924834086626e-05 -0.0080326799461400891 0.16663954915113344 ;
+	setAttr ".r" -type "double3" 4.5888029739502187e-05 -0.029533377180525521 -12.770589203789523 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jot" -type "string" "xzy";
@@ -11868,7 +11870,7 @@ createNode parentConstraint -n "R_01_Jnt_04_parentConstraint1" -p "R_01_Jnt_04";
 		1.3322676295501878e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -4.9571926480622783e-15 3.0314661807699139e-15 
 		9.7849034862773759e-15 ;
-	setAttr ".lr" -type "double3" -0.37911808093341604 -9.8431297183129747 11.61646827337958 ;
+	setAttr ".lr" -type "double3" -2.09445079666017 -10.974389025254782 12.497510836133634 ;
 	setAttr ".rst" -type "double3" -0.12248683843974972 0.48191066905574065 -0.07184616036560576 ;
 	setAttr ".rsrr" -type "double3" 4.9447686063378106e-15 -3.0563142642188468e-15 -1.27344001105136e-14 ;
 	setAttr -k on ".w0";
@@ -11913,7 +11915,7 @@ createNode parentConstraint -n "R_01_Jnt_05_parentConstraint1" -p "R_01_Jnt_05";
 		8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 1.5902773407317587e-14 9.5416640443905519e-15 
 		1.9083328088781104e-14 ;
-	setAttr ".lr" -type "double3" -14.421874974813324 -3.4833633524554881 -2.8875897646210005 ;
+	setAttr ".lr" -type "double3" -15.12378262993677 -5.2146939070548894 -3.8166267929558599 ;
 	setAttr ".rst" -type "double3" -0.15354615286427031 -0.50898359894566703 0.39984838669788503 ;
 	setAttr ".rsrr" -type "double3" -2.2263882770244621e-14 -6.3611093629270375e-15 
 		-1.9083328088781101e-14 ;
@@ -11958,7 +11960,7 @@ createNode parentConstraint -n "R_01_Jnt_06_parentConstraint1" -p "R_01_Jnt_06";
 	setAttr ".tg[0].tot" -type "double3" 0 4.9960036108132044e-16 -2.6645352591003757e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -1.1131941385122304e-14 3.180554681463516e-15 
 		-3.180554681463516e-15 ;
-	setAttr ".lr" -type "double3" 4.4021459020148725 -11.150159891712805 -9.7970808187209002 ;
+	setAttr ".lr" -type "double3" 4.7803022907008534 -13.187482224729219 -9.4708713182069264 ;
 	setAttr ".rst" -type "double3" -0.1555395129006174 -0.43627997071175706 -0.3690596485426052 ;
 	setAttr ".rsrr" -type "double3" 1.590277340731758e-15 -6.361109362927032e-15 -8.8278125961003129e-32 ;
 	setAttr -k on ".w0";
@@ -12070,7 +12072,7 @@ createNode parentConstraint -n "R_02_Jnt_04_parentConstraint1" -p "R_02_Jnt_04";
 	setAttr ".tg[0].tot" -type "double3" 0 2.7755575615628914e-16 -8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -1.5902773407317584e-15 -1.5902773407317587e-14 
 		0 ;
-	setAttr ".lr" -type "double3" -7.2513851213769103 -11.452680811500299 -8.007163101983835 ;
+	setAttr ".lr" -type "double3" -8.1727533094833235e-11 -8.297112997539124e-11 -7.3591674219643657e-11 ;
 	setAttr ".rst" -type "double3" -0.11864599083676891 -0.44803851579954834 -0.35026948637798894 ;
 	setAttr ".rsrr" -type "double3" -3.1805546814635168e-15 1.5902773407317584e-14 -4.4139062980501586e-31 ;
 	setAttr -k on ".w0";
@@ -12114,7 +12116,7 @@ createNode parentConstraint -n "R_02_Jnt_05_parentConstraint1" -p "R_02_Jnt_05";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tor" -type "double3" -1.2424041724466865e-17 -3.9756933518293969e-16 
 		1.8983547503681481e-15 ;
-	setAttr ".lr" -type "double3" 3.3931888048269232 -15.650453632398476 1.2216055722870558 ;
+	setAttr ".lr" -type "double3" 3.7644051286465052e-11 -1.3252700459405331e-10 -7.1355464742048803e-13 ;
 	setAttr ".rst" -type "double3" -0.16777899511248462 0.58473058138028211 0.021664623761434854 ;
 	setAttr ".rsrr" -type "double3" 3.3675432571793813e-36 2.4848083448933725e-16 1.5530052155583578e-18 ;
 	setAttr -k on ".w0";
@@ -12160,7 +12162,7 @@ createNode parentConstraint -n "R_02_Jnt_06_parentConstraint1" -p "R_02_Jnt_06";
 		-8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 3.6576378836830441e-14 -2.2263882770244617e-14 
 		1.2722218725854067e-14 ;
-	setAttr ".lr" -type "double3" -12.418017387917352 -7.8798422335769933 7.4851823122184387 ;
+	setAttr ".lr" -type "double3" -9.2476217640937971e-11 -7.3960618562695755e-11 7.0462008413202427e-11 ;
 	setAttr ".rst" -type "double3" -0.094317456099176258 -0.44930301094187186 0.39970862122619683 ;
 	setAttr ".rsrr" -type "double3" -5.5659706925611542e-14 1.9083328088781091e-14 -1.908332808878111e-14 ;
 	setAttr -k on ".w0";
@@ -12234,7 +12236,7 @@ createNode joint -n "R_03_Jnt_01" -p "Abdoment_Jnt";
 createNode joint -n "R_03_Jnt_02" -p "R_03_Jnt_01";
 	rename -uid "D8B9F79A-468C-62C7-B71C-C1AC9825D3BC";
 	setAttr ".t" -type "double3" -4.1967391561892082 -7.0754098397074472e-05 -1.4681420810180867e-06 ;
-	setAttr ".r" -type "double3" 6.0698273247908407e-07 0.11097702109823505 0.0034518248045299197 ;
+	setAttr ".r" -type "double3" -1.0486677593193078e-06 -0.24959872702508112 13.141920495909275 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -1.7408638084218171 -0.18086894643511814 73.243310926085201 ;
@@ -12441,7 +12443,7 @@ createNode parentConstraint -n "Abdoment_Jnt_parentConstraint1" -p "Abdoment_Jnt
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" -2.6442383379809129e-16 -1.364898681640625 -0.41518926620483398 ;
 	setAttr -k on ".w0";
-createNode transform -n "Controls";
+createNode transform -n "Controls" -p "Spider_Bot";
 	rename -uid "5546C675-4DB0-AB2E-562D-11B0D762B027";
 createNode transform -n "Transform_Ctrl_Grp" -p "Controls";
 	rename -uid "E6525C6D-4F95-1561-59C2-4FA10085BFF3";
@@ -12558,7 +12560,7 @@ createNode nurbsCurve -n "L_01_IK_CtrlShape" -p "L_01_IK_Ctrl";
 createNode ikHandle -n "L_01_IK_Handle" -p "L_01_IK_Ctrl";
 	rename -uid "DD1E73DA-4823-A5C7-D182-6C93830ACF20";
 	setAttr ".roc" yes;
-createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle";
+createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle";
 	rename -uid "3EC86A4B-4B3B-867D-01C1-8EA88E99B909";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_01_IK_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -12575,14 +12577,14 @@ createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|C
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 2.7139771636744507 8.0116859258710296 2.7138184830274827 ;
 	setAttr -k on ".w0";
-createNode transform -n "L_01_Toe_01_Grp" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle";
+createNode transform -n "L_01_Toe_01_Grp" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle";
 	rename -uid "A8C7E6FE-46F8-9DCF-0A37-CFA6C2CAF33C";
 	setAttr ".t" -type "double3" 0.39243533224881588 -0.10977884926958903 0.29383852955206979 ;
 	setAttr ".r" -type "double3" -160.19268568544419 -41.283109891936235 -28.625669749014261 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1 ;
 createNode transform -n "L_Toe_01_Ctrl" -p "L_01_Toe_01_Grp";
 	rename -uid "AA500735-46C8-7CA1-726E-82B8717ADCFA";
-createNode nurbsCurve -n "L_Toe_01_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl";
+createNode nurbsCurve -n "L_Toe_01_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl";
 	rename -uid "45E9B442-4C2E-5E25-A5B3-29B3AC2475F1";
 	setAttr -k off ".v";
 	setAttr ".tw" yes;
@@ -12592,7 +12594,7 @@ createNode nurbsCurve -n "L_Toe_01_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|T
 		2.387871713094714 -1.1953539634779888 0.15223992287261612 1.8070737006890709 -0.43844325721521299 
 		0.15223992287261678 1.226275688283428 0.31846744904756341 0.15223992287261601 0.98570127454567302 
 		0.63199012908700292 0.15223992287261623 0 0 0 0 0 0 0 0 0;
-createNode transform -n "L_01_Toe_02_Grp" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle";
+createNode transform -n "L_01_Toe_02_Grp" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle";
 	rename -uid "A438B7D2-4AF8-86D3-3DE9-3CBEB87B7DEA";
 	setAttr ".t" -type "double3" -0.6393266275582361 -0.16688162022599817 -0.077016557577025413 ;
 	setAttr ".r" -type "double3" -4.3122962995995557 -8.8103369509703686 -154.59704993756912 ;
@@ -12618,7 +12620,7 @@ createNode nurbsCurve -n "L_01_Toe_02_CtrlShape" -p "L_01_Toe_02_Ctrl";
 		1.8070737006890707 -0.43844325721521332 -0.95595426468177058
 		1.6042600882034894 -1.1953539634779888 -0.63137170201860837
 		;
-createNode transform -n "L_01_Toe_03_Grp" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle";
+createNode transform -n "L_01_Toe_03_Grp" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle";
 	rename -uid "17CCFC3D-4F69-AE9D-B585-8484E2D6DE7E";
 	setAttr ".t" -type "double3" -0.042037009987505591 -0.16694246205126673 -0.5666640144498567 ;
 	setAttr ".r" -type "double3" 122.49011518247762 61.266534161521747 -60.968402415694314 ;
@@ -12685,7 +12687,7 @@ createNode ikHandle -n "L_01_IK_Handle" -p "L_02_PV_Offset_Ctrl";
 	setAttr ".pv" -type "double3" 2.7139771636744507 8.0116859258710296 2.7138184830274827 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_PV_Ctrl_Grp|L_02_PV_Offset_Ctrl|L_01_IK_Handle";
+createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_PV_Ctrl_Grp|L_02_PV_Offset_Ctrl|L_01_IK_Handle";
 	rename -uid "418E9D5D-42B5-0D1D-A4DB-25968C8C3E5B";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_01_IK_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -12736,7 +12738,7 @@ createNode ikHandle -n "L_01_IK_Handle" -p "L_02_PV_Ctrl";
 	setAttr ".pv" -type "double3" 2.7139771636744507 8.0116859258710296 2.7138184830274827 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_PV_Ctrl_Grp|L_02_PV_Offset_Ctrl|L_02_PV_Ctrl|L_01_IK_Handle";
+createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_PV_Ctrl_Grp|L_02_PV_Offset_Ctrl|L_02_PV_Ctrl|L_01_IK_Handle";
 	rename -uid "F07C6D65-4611-E133-41DD-F49293540762";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_01_IK_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -12787,7 +12789,7 @@ createNode nurbsCurve -n "L_02_IK_CtrlShape" -p "L_02_IK_Ctrl";
 createNode ikHandle -n "L_02_IK_Handle" -p "L_02_IK_Ctrl";
 	rename -uid "E75FF511-43CD-3DB8-FB48-80A7E1B6E579";
 	setAttr ".roc" yes;
-createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle";
+createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle";
 	rename -uid "485E155A-4426-09D7-29EF-5ABF653B4C99";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_02_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -12804,14 +12806,14 @@ createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|C
 	setAttr ".erp" yes;
 	setAttr ".rst" -type "double3" 4.1849355871009717 6.7270263997334467 -0.0076107620406736798 ;
 	setAttr -k on ".w0";
-createNode transform -n "L_02_Toe_01_Grp" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle";
+createNode transform -n "L_02_Toe_01_Grp" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle";
 	rename -uid "6B17F84C-4F1F-9124-76A0-51A312AE4B16";
 	setAttr ".t" -type "double3" -0.42125518272039031 -0.19256994029092778 -0.35066603646044314 ;
 	setAttr ".r" -type "double3" 39.093801056007052 53.12805143740205 -135.24865156332032 ;
 	setAttr ".s" -type "double3" 0.99999999999999989 1.0000000000000004 0.99999999999999967 ;
 createNode transform -n "L_Toe_01_Ctrl" -p "L_02_Toe_01_Grp";
 	rename -uid "ACEE24BC-402B-E916-01C0-6686EDC230C4";
-createNode nurbsCurve -n "L_Toe_01_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl";
+createNode nurbsCurve -n "L_Toe_01_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl";
 	rename -uid "FEF2281B-4713-7646-C7DD-9CA3A0A65AD0";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -12830,14 +12832,14 @@ createNode nurbsCurve -n "L_Toe_01_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|T
 		1.8070737006890707 -0.43844325721521332 -0.95595426468177058
 		1.6042600882034894 -1.1953539634779888 -0.63137170201860837
 		;
-createNode transform -n "L_02_Toe_02_Grp" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle";
+createNode transform -n "L_02_Toe_02_Grp" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle";
 	rename -uid "5EFFD495-4DDC-75B3-EA90-69881C5239BC";
 	setAttr ".t" -type "double3" 0.60462083587966475 -0.066818217757137699 0.022335948604471079 ;
 	setAttr ".r" -type "double3" -179.95019296031762 1.6810216631711694 -21.883462904426519 ;
 	setAttr ".s" -type "double3" 0.99999999999999978 1.0000000000000004 0.99999999999999967 ;
 createNode transform -n "L_Toe_02_Ctrl" -p "L_02_Toe_02_Grp";
 	rename -uid "8581A4DA-4CE0-85B1-85D9-2EBBD12BD080";
-createNode nurbsCurve -n "L_Toe_02_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl";
+createNode nurbsCurve -n "L_Toe_02_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl";
 	rename -uid "4EF7CE93-44E8-1B88-3A6F-18BADE85ABA2";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -12856,14 +12858,14 @@ createNode nurbsCurve -n "L_Toe_02_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|T
 		1.8070737006890707 -0.43844325721521332 -0.95595426468177058
 		1.6042600882034894 -1.1953539634779888 -0.63137170201860837
 		;
-createNode transform -n "L_02_Toe_03_Grp" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle";
+createNode transform -n "L_02_Toe_03_Grp" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle";
 	rename -uid "EAB4A466-40B0-1DFC-C3CD-81AF66AE0A96";
 	setAttr ".t" -type "double3" -0.42740407292749527 -0.16856178303320801 0.3993026569311714 ;
 	setAttr ".r" -type "double3" -31.919882429662483 -47.077513575543207 -138.42278438716502 ;
 	setAttr ".s" -type "double3" 1 1.0000000000000002 0.99999999999999967 ;
 createNode transform -n "L_Toe_03_Ctrl" -p "L_02_Toe_03_Grp";
 	rename -uid "0744DC02-46A2-1BF9-FBE0-548BAD35EF17";
-createNode nurbsCurve -n "L_Toe_03_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl";
+createNode nurbsCurve -n "L_Toe_03_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl";
 	rename -uid "1996B84C-4E1B-0C52-F33B-F89D55A355D3";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -12924,7 +12926,7 @@ createNode ikHandle -n "L_01_IK_Handle" -p "L_03_PV_Offset_Grp";
 	setAttr ".pv" -type "double3" 2.7139771636744507 8.0116859258710296 2.7138184830274827 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_PV_Ctrl_Grp|L_03_PV_Offset_Grp|L_01_IK_Handle";
+createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_PV_Ctrl_Grp|L_03_PV_Offset_Grp|L_01_IK_Handle";
 	rename -uid "AF421910-46B0-E872-A6F1-05A9011DE050";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_01_IK_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -12954,7 +12956,7 @@ createNode ikHandle -n "L_02_IK_Handle" -p "L_03_PV_Offset_Grp";
 	setAttr ".pv" -type "double3" 4.1849355871009717 6.7270263997334467 -0.0076107620406736798 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_PV_Ctrl_Grp|L_03_PV_Offset_Grp|L_02_IK_Handle";
+createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_PV_Ctrl_Grp|L_03_PV_Offset_Grp|L_02_IK_Handle";
 	rename -uid "07F42CB1-48B1-E5DF-57BA-A4871484713B";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_02_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13005,7 +13007,7 @@ createNode ikHandle -n "L_01_IK_Handle" -p "L_03_PV_Ctrl";
 	setAttr ".pv" -type "double3" 2.7139771636744507 8.0116859258710296 2.7138184830274827 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_PV_Ctrl_Grp|L_03_PV_Offset_Grp|L_03_PV_Ctrl|L_01_IK_Handle";
+createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_PV_Ctrl_Grp|L_03_PV_Offset_Grp|L_03_PV_Ctrl|L_01_IK_Handle";
 	rename -uid "0D2677B0-4E23-901C-E46D-628578A66C4D";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_01_IK_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13035,7 +13037,7 @@ createNode ikHandle -n "L_02_IK_Handle" -p "L_03_PV_Ctrl";
 	setAttr ".pv" -type "double3" 4.1849355871009717 6.7270263997334467 -0.0076107620406736798 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_PV_Ctrl_Grp|L_03_PV_Offset_Grp|L_03_PV_Ctrl|L_02_IK_Handle";
+createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_PV_Ctrl_Grp|L_03_PV_Offset_Grp|L_03_PV_Ctrl|L_02_IK_Handle";
 	rename -uid "B4BD8541-4153-358F-C739-5C97C4DEC076";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_02_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13110,7 +13112,7 @@ createNode transform -n "L_03_Toe_01_Grp" -p "L_03_IK_Handle";
 	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999967 ;
 createNode transform -n "L_Toe_01_Ctrl" -p "L_03_Toe_01_Grp";
 	rename -uid "6D6AB993-4A37-0765-2DDD-47AD3838B603";
-createNode nurbsCurve -n "L_Toe_01_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl";
+createNode nurbsCurve -n "L_Toe_01_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl";
 	rename -uid "8FF266FF-485F-5231-B7E6-23A7D4701A52";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -13136,7 +13138,7 @@ createNode transform -n "L_03_Toe_02_Grp" -p "L_03_IK_Handle";
 	setAttr ".s" -type "double3" 0.99999999999999989 0.99999999999999967 0.99999999999999956 ;
 createNode transform -n "L_Toe_02_Ctrl" -p "L_03_Toe_02_Grp";
 	rename -uid "AA93AF6F-4B74-FEA8-A479-6785E3CA9716";
-createNode nurbsCurve -n "L_Toe_02_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl";
+createNode nurbsCurve -n "L_Toe_02_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl";
 	rename -uid "4EC1B169-486C-DEFB-AB9C-E3AD9E8D6650";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -13162,7 +13164,7 @@ createNode transform -n "L_03_Toe_03_Grp" -p "L_03_IK_Handle";
 	setAttr ".s" -type "double3" 1 0.99999999999999989 0.99999999999999989 ;
 createNode transform -n "L_Toe_03_Ctrl" -p "L_03_Toe_03_Grp";
 	rename -uid "7396D89A-4910-CA47-0C43-0F823615CF8A";
-createNode nurbsCurve -n "L_Toe_03_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl";
+createNode nurbsCurve -n "L_Toe_03_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl";
 	rename -uid "DED1FF93-4238-7422-B10B-4F86B7DCFDF4";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -13222,7 +13224,7 @@ createNode ikHandle -n "L_01_IK_Handle" -p "R_01_PV_Offset_Grp";
 	setAttr ".pv" -type "double3" 2.7139771636744507 8.0116859258710296 2.7138184830274827 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_PV_Ctrl_Grp|R_01_PV_Offset_Grp|L_01_IK_Handle";
+createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_PV_Ctrl_Grp|R_01_PV_Offset_Grp|L_01_IK_Handle";
 	rename -uid "B2306208-4ECC-D8A8-B0BA-75A90D3465BA";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_01_IK_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13252,7 +13254,7 @@ createNode ikHandle -n "L_02_IK_Handle" -p "R_01_PV_Offset_Grp";
 	setAttr ".pv" -type "double3" 4.1849355871009717 6.7270263997334467 -0.0076107620406736798 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_PV_Ctrl_Grp|R_01_PV_Offset_Grp|L_02_IK_Handle";
+createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_PV_Ctrl_Grp|R_01_PV_Offset_Grp|L_02_IK_Handle";
 	rename -uid "B96F16E8-466D-99C1-941A-BAAD4CA4C45E";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_02_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13303,7 +13305,7 @@ createNode ikHandle -n "L_01_IK_Handle" -p "R_01_PV_Ctrl";
 	setAttr ".pv" -type "double3" 2.7139771636744507 8.0116859258710296 2.7138184830274827 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_PV_Ctrl_Grp|R_01_PV_Offset_Grp|R_01_PV_Ctrl|L_01_IK_Handle";
+createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_PV_Ctrl_Grp|R_01_PV_Offset_Grp|R_01_PV_Ctrl|L_01_IK_Handle";
 	rename -uid "1E599042-4EE5-B147-47E5-4AA9E2D609B8";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_01_IK_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13333,7 +13335,7 @@ createNode ikHandle -n "L_02_IK_Handle" -p "R_01_PV_Ctrl";
 	setAttr ".pv" -type "double3" 4.1849355871009717 6.7270263997334467 -0.0076107620406736798 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_PV_Ctrl_Grp|R_01_PV_Offset_Grp|R_01_PV_Ctrl|L_02_IK_Handle";
+createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_PV_Ctrl_Grp|R_01_PV_Offset_Grp|R_01_PV_Ctrl|L_02_IK_Handle";
 	rename -uid "8D1A2D07-4C1F-7BE5-06FF-A891209D10A8";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_02_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13408,7 +13410,7 @@ createNode transform -n "R_01_Toe_01_Grp" -p "R_01_IK_Handle";
 	setAttr ".s" -type "double3" 1 1.0000000000000002 0.99999999999999978 ;
 createNode transform -n "R_Toe_01_Ctrl" -p "R_01_Toe_01_Grp";
 	rename -uid "D3C128FA-464F-C876-9E47-A88C56931E06";
-createNode nurbsCurve -n "R_Toe_01_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl";
+createNode nurbsCurve -n "R_Toe_01_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl";
 	rename -uid "E2FCEF9A-4287-45CD-2447-F8BB8A2BC1AB";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -13434,7 +13436,7 @@ createNode transform -n "R_01_Toe_02_Grp" -p "R_01_IK_Handle";
 	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
 createNode transform -n "R_Toe_02_Ctrl" -p "R_01_Toe_02_Grp";
 	rename -uid "79A88E96-4723-0F27-FDA1-9ABF20D50CCD";
-createNode nurbsCurve -n "R_Toe_02_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl";
+createNode nurbsCurve -n "R_Toe_02_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl";
 	rename -uid "A8372803-4BDE-A9A4-4548-D49798E56ED2";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -13460,7 +13462,7 @@ createNode transform -n "R_01_Toe_03_Grp" -p "R_01_IK_Handle";
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1 ;
 createNode transform -n "R_Toe_03_Ctrl" -p "R_01_Toe_03_Grp";
 	rename -uid "9A1EEA27-4EEC-328F-6ACA-ECA27F572D84";
-createNode nurbsCurve -n "R_Toe_03_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl";
+createNode nurbsCurve -n "R_Toe_03_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl";
 	rename -uid "88054AF2-4313-ACC5-7F24-819296756CF0";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -13521,7 +13523,7 @@ createNode ikHandle -n "L_01_IK_Handle" -p "R_02_PV_Offset_Grp";
 	setAttr ".pv" -type "double3" 2.7139771636744507 8.0116859258710296 2.7138184830274827 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_PV_Ctrl_Grp|R_02_PV_Offset_Grp|L_01_IK_Handle";
+createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_PV_Ctrl_Grp|R_02_PV_Offset_Grp|L_01_IK_Handle";
 	rename -uid "8F141A55-4D4B-7C45-4D4F-5D8249B0C6FC";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_01_IK_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13551,7 +13553,7 @@ createNode ikHandle -n "L_02_IK_Handle" -p "R_02_PV_Offset_Grp";
 	setAttr ".pv" -type "double3" 4.1849355871009717 6.7270263997334467 -0.0076107620406736798 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_PV_Ctrl_Grp|R_02_PV_Offset_Grp|L_02_IK_Handle";
+createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_PV_Ctrl_Grp|R_02_PV_Offset_Grp|L_02_IK_Handle";
 	rename -uid "BC66DF6D-47B2-609C-EB59-9AA1636B69E3";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_02_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13602,7 +13604,7 @@ createNode ikHandle -n "L_01_IK_Handle" -p "R_02_PV_Ctrl";
 	setAttr ".pv" -type "double3" 2.7139771636744507 8.0116859258710296 2.7138184830274827 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_PV_Ctrl_Grp|R_02_PV_Offset_Grp|R_02_PV_Ctrl|L_01_IK_Handle";
+createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_PV_Ctrl_Grp|R_02_PV_Offset_Grp|R_02_PV_Ctrl|L_01_IK_Handle";
 	rename -uid "4136E83A-4E12-E801-3CBF-1DAAEC163B6B";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_01_IK_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13632,7 +13634,7 @@ createNode ikHandle -n "L_02_IK_Handle" -p "R_02_PV_Ctrl";
 	setAttr ".pv" -type "double3" 4.1849355871009717 6.7270263997334467 -0.0076107620406736798 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_PV_Ctrl_Grp|R_02_PV_Offset_Grp|R_02_PV_Ctrl|L_02_IK_Handle";
+createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_PV_Ctrl_Grp|R_02_PV_Offset_Grp|R_02_PV_Ctrl|L_02_IK_Handle";
 	rename -uid "4876C17F-4161-0F1E-A463-E98F44F542D7";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_02_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13707,7 +13709,7 @@ createNode transform -n "R_02_Toe_01_Grp" -p "R_02_IK_Handle";
 	setAttr ".s" -type "double3" 1.0000000000000004 1.0000000000000002 1.0000000000000002 ;
 createNode transform -n "R_Toe_01_Ctrl" -p "R_02_Toe_01_Grp";
 	rename -uid "244CC316-447C-1C13-061B-2D8E9C0C0DB2";
-createNode nurbsCurve -n "R_Toe_01_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl";
+createNode nurbsCurve -n "R_Toe_01_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl";
 	rename -uid "591160B0-49D0-FE06-2F76-7DBA10201774";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -13733,7 +13735,7 @@ createNode transform -n "R_02_Toe_02_Grp" -p "R_02_IK_Handle";
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 0.99999999999999978 ;
 createNode transform -n "R_Toe_02_Ctrl" -p "R_02_Toe_02_Grp";
 	rename -uid "1519CE96-4AA1-4E4E-190B-7C814631F1D6";
-createNode nurbsCurve -n "R_Toe_02_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl";
+createNode nurbsCurve -n "R_Toe_02_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl";
 	rename -uid "4FFBC09E-47AF-B982-7942-7DA9489FD318";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -13759,7 +13761,7 @@ createNode transform -n "R_02_Toe_03_Grp" -p "R_02_IK_Handle";
 	setAttr ".s" -type "double3" 1.0000000000000004 1.0000000000000002 1 ;
 createNode transform -n "R_Toe_03_Ctrl" -p "R_02_Toe_03_Grp";
 	rename -uid "897A8F0C-4BC8-E5FD-DA6E-EE9702767F31";
-createNode nurbsCurve -n "R_Toe_03_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl";
+createNode nurbsCurve -n "R_Toe_03_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl";
 	rename -uid "C549F8B7-4FB0-4505-AEE0-2C8B9895727F";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -13820,7 +13822,7 @@ createNode ikHandle -n "L_01_IK_Handle" -p "R_03_PV_Offset_Grp";
 	setAttr ".pv" -type "double3" 2.7139771636744507 8.0116859258710296 2.7138184830274827 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_PV_Grp|R_03_PV_Offset_Grp|L_01_IK_Handle";
+createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_PV_Grp|R_03_PV_Offset_Grp|L_01_IK_Handle";
 	rename -uid "4AD5279E-4BC9-2E98-2ED2-F6B59418ADAF";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_01_IK_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13850,7 +13852,7 @@ createNode ikHandle -n "L_02_IK_Handle" -p "R_03_PV_Offset_Grp";
 	setAttr ".pv" -type "double3" 4.1849355871009717 6.7270263997334467 -0.0076107620406736798 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_PV_Grp|R_03_PV_Offset_Grp|L_02_IK_Handle";
+createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_PV_Grp|R_03_PV_Offset_Grp|L_02_IK_Handle";
 	rename -uid "05E7DF87-485E-81CB-EE4D-1E9D777F4CAF";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_02_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13901,7 +13903,7 @@ createNode ikHandle -n "L_01_IK_Handle" -p "R_03_PV_Ctrl";
 	setAttr ".pv" -type "double3" 2.7139771636744507 8.0116859258710296 2.7138184830274827 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_PV_Grp|R_03_PV_Offset_Grp|R_03_PV_Ctrl|L_01_IK_Handle";
+createNode poleVectorConstraint -n "L_01_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_PV_Grp|R_03_PV_Offset_Grp|R_03_PV_Ctrl|L_01_IK_Handle";
 	rename -uid "1A3FE746-4DE7-8A54-71D7-5585E3C11193";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_01_IK_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -13931,7 +13933,7 @@ createNode ikHandle -n "L_02_IK_Handle" -p "R_03_PV_Ctrl";
 	setAttr ".pv" -type "double3" 4.1849355871009717 6.7270263997334467 -0.0076107620406736798 ;
 	setAttr ".roc" yes;
 	setAttr ".hio" yes;
-createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_PV_Grp|R_03_PV_Offset_Grp|R_03_PV_Ctrl|L_02_IK_Handle";
+createNode poleVectorConstraint -n "L_02_IK_Handle_poleVectorConstraint1" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_PV_Grp|R_03_PV_Offset_Grp|R_03_PV_Ctrl|L_02_IK_Handle";
 	rename -uid "6E6C10BC-4472-092C-2177-A998E009032A";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "L_02_PV_CtrlW0" -dv 1 -min 0 -at "double";
 	setAttr -k on ".nds";
@@ -14006,7 +14008,7 @@ createNode transform -n "R_03_Toe_01_Grp" -p "R_03_IK_handle";
 	setAttr ".s" -type "double3" 0.99999999999999967 1 0.99999999999999989 ;
 createNode transform -n "R_Toe_01_Ctrl" -p "R_03_Toe_01_Grp";
 	rename -uid "17B08221-4554-FAB9-9FD0-1B9513C0D671";
-createNode nurbsCurve -n "R_Toe_01_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl";
+createNode nurbsCurve -n "R_Toe_01_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl";
 	rename -uid "14212F6B-4BBB-A381-D1C5-4091C825404C";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -14031,7 +14033,7 @@ createNode transform -n "R_03_Toe_02_Grp" -p "R_03_IK_handle";
 	setAttr ".r" -type "double3" 42.553572935109152 55.193934437377095 48.140146873581841 ;
 createNode transform -n "R_Toe_02_Ctrl" -p "R_03_Toe_02_Grp";
 	rename -uid "BB87C43F-4C05-AEB8-A159-1F9BB7A57E83";
-createNode nurbsCurve -n "R_Toe_02_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl";
+createNode nurbsCurve -n "R_Toe_02_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl";
 	rename -uid "9D7D8BF9-4412-7C05-8280-3092B6AC37A1";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -14057,7 +14059,7 @@ createNode transform -n "R_03_Toe_03_Grp" -p "R_03_IK_handle";
 	setAttr ".s" -type "double3" 1.0000000000000002 0.99999999999999989 1.0000000000000002 ;
 createNode transform -n "R_Toe_03_Ctrl" -p "R_03_Toe_03_Grp";
 	rename -uid "373C3573-4D1E-E653-FE82-0F9C4E9AF4EA";
-createNode nurbsCurve -n "R_Toe_03_CtrlShape" -p "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl";
+createNode nurbsCurve -n "R_Toe_03_CtrlShape" -p "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl";
 	rename -uid "544C7847-49B0-516A-0649-ABB030765E10";
 	setAttr -k off ".v";
 	setAttr ".cc" -type "nurbsCurve" 
@@ -14096,22 +14098,22 @@ createNode file -n "SpiderBot1F";
 createNode place2dTexture -n "SpiderBot_P2D";
 	rename -uid "D7D465D9-4029-34BC-7B01-0EA7FB0A1C50";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "A5197B6F-47FD-D211-2D6C-7A8B55DFB82D";
+	rename -uid "13F5421B-401B-B0AF-D448-318CF9D0FFFE";
 	setAttr -s 3 ".lnk";
 	setAttr -s 3 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "C8B965AC-41BE-8B9B-1A88-B4B37DDB2AEB";
+	rename -uid "4270AC7C-4E92-4B13-1EA3-C5827DF7EC64";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "26B423D0-4515-CCD4-EF9B-CCBE14EB971A";
+	rename -uid "DE4BCE74-43A5-F831-1CB8-DA8A8DECF3C6";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "500604F7-4144-EACF-6704-E2812C7CDA6A";
+	rename -uid "6A2E95C4-46B3-4238-7CA5-00B1DB80EB25";
 	setAttr ".cdl" 1;
 	setAttr -s 2 ".dli[1]"  1;
 	setAttr -s 2 ".dli";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "8644FC77-4A1D-01EF-AB58-E8A6D70F73F8";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "2CACD34A-443C-A637-9A2E-C69016886E51";
+	rename -uid "827EEA40-41A3-E5A8-FB62-0C8FF886BB10";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "42370894-4F9C-FFE2-A3BD-BFB53C6526AC";
 	setAttr ".g" yes;
@@ -14144,19 +14146,19 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1\n            -height 1\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"modelPanel\" (localizedPanelLabel(\"Persp View\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tmodelPanel -edit -l (localizedPanelLabel(\"Persp View\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        modelEditor -e \n            -camera \"persp\" \n            -useInteractiveMode 0\n            -displayLights \"default\" \n            -displayAppearance \"smoothShaded\" \n            -activeOnly 0\n            -ignorePanZoom 0\n"
 		+ "            -wireframeOnShaded 0\n            -headsUpDisplay 1\n            -holdOuts 1\n            -selectionHiliteDisplay 1\n            -useDefaultMaterial 0\n            -bufferMode \"double\" \n            -twoSidedLighting 0\n            -backfaceCulling 0\n            -xray 0\n            -jointXray 0\n            -activeComponentsXray 0\n            -displayTextures 1\n            -smoothWireframe 0\n            -lineWidth 1\n            -textureAnisotropic 0\n            -textureHilight 1\n            -textureSampling 2\n            -textureDisplay \"modulate\" \n            -textureMaxSize 16384\n            -fogging 0\n            -fogSource \"fragment\" \n            -fogMode \"linear\" \n            -fogStart 0\n            -fogEnd 100\n            -fogDensity 0.1\n            -fogColor 0.5 0.5 0.5 1 \n            -depthOfFieldPreview 1\n            -maxConstantTransparency 1\n            -rendererName \"vp2Renderer\" \n            -objectFilterShowInHUD 1\n            -isFiltered 0\n            -colorResolution 256 256 \n            -bumpResolution 512 512 \n"
 		+ "            -textureCompression 0\n            -transparencyAlgorithm \"frontAndBackCull\" \n            -transpInShadows 0\n            -cullingOverride \"none\" \n            -lowQualityLighting 0\n            -maximumNumHardwareLights 1\n            -occlusionCulling 0\n            -shadingModel 0\n            -useBaseRenderer 0\n            -useReducedRenderer 0\n            -smallObjectCulling 0\n            -smallObjectThreshold -1 \n            -interactiveDisableShadows 0\n            -interactiveBackFaceCull 0\n            -sortTransparent 1\n            -controllers 1\n            -nurbsCurves 1\n            -nurbsSurfaces 1\n            -polymeshes 1\n            -subdivSurfaces 1\n            -planes 1\n            -lights 1\n            -cameras 1\n            -controlVertices 1\n            -hulls 1\n            -grid 1\n            -imagePlane 1\n            -joints 1\n            -ikHandles 1\n            -deformers 1\n            -dynamics 1\n            -particleInstancers 1\n            -fluids 1\n            -hairSystems 1\n            -follicles 1\n"
-		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1535\n            -height 544\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
+		+ "            -nCloths 1\n            -nParticles 1\n            -nRigids 1\n            -dynamicConstraints 1\n            -locators 1\n            -manipulators 1\n            -pluginShapes 1\n            -dimensions 1\n            -handles 1\n            -pivots 1\n            -textures 1\n            -strokes 1\n            -motionTrails 1\n            -clipGhosts 1\n            -greasePencils 1\n            -shadows 0\n            -captureSequenceNumber -1\n            -width 1319\n            -height 708\n            -sceneRenderFilter 0\n            $editorName;\n        modelEditor -e -viewSelected 0 $editorName;\n        modelEditor -e \n            -pluginObjects \"gpuCacheDisplayFilter\" 1 \n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"ToggledOutliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"ToggledOutliner\")) -mbv $menusOkayInPanels  $panelName;\n"
 		+ "\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -docTag \"isolOutln_fromSeln\" \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 1\n            -showReferenceMembers 1\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n"
 		+ "            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -isSet 0\n            -isSetMember 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            -renderFilterIndex 0\n            -selectionOrder \"chronological\" \n"
 		+ "            -expandAttribute 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextPanel \"outlinerPanel\" (localizedPanelLabel(\"Outliner\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\toutlinerPanel -edit -l (localizedPanelLabel(\"Outliner\")) -mbv $menusOkayInPanels  $panelName;\n\t\t$editorName = $panelName;\n        outlinerEditor -e \n            -showShapes 0\n            -showAssignedMaterials 0\n            -showTimeEditor 1\n            -showReferenceNodes 0\n            -showReferenceMembers 0\n            -showAttributes 0\n            -showConnected 0\n            -showAnimCurvesOnly 0\n            -showMuteInfo 0\n            -organizeByLayer 1\n            -organizeByClip 1\n            -showAnimLayerWeight 1\n            -autoExpandLayers 1\n            -autoExpand 0\n            -showDagOnly 1\n            -showAssets 1\n            -showContainedOnly 1\n            -showPublishedAsConnected 0\n            -showParentContainers 0\n"
 		+ "            -showContainerContents 1\n            -ignoreDagHierarchy 0\n            -expandConnections 0\n            -showUpstreamCurves 1\n            -showUnitlessCurves 1\n            -showCompounds 1\n            -showLeafs 1\n            -showNumericAttrsOnly 0\n            -highlightActive 1\n            -autoSelectNewObjects 0\n            -doNotSelectNewObjects 0\n            -dropIsParent 1\n            -transmitFilters 0\n            -setFilter \"defaultSetFilter\" \n            -showSetMembers 1\n            -allowMultiSelection 1\n            -alwaysToggleSelect 0\n            -directSelect 0\n            -displayMode \"DAG\" \n            -expandObjects 0\n            -setsIgnoreFilters 1\n            -containersIgnoreFilters 0\n            -editAttrName 0\n            -showAttrValues 0\n            -highlightSecondary 0\n            -showUVAttrsOnly 0\n            -showTextureNodesOnly 0\n            -attrAlphaOrder \"default\" \n            -animLayerFilterOptions \"allAffecting\" \n            -sortOrder \"none\" \n            -longNames 0\n"
 		+ "            -niceNames 1\n            -showNamespace 1\n            -showPinIcons 0\n            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n"
-		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n"
-		+ "                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n"
-		+ "                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n"
-		+ "                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n"
-		+ "                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n"
-		+ "            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n"
-		+ "\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
+		+ "                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n"
+		+ "                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showPlayRangeShades \"on\" \n                -lockPlayRangeShades \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n"
+		+ "                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -valueLinesToggle 0\n                -outliner \"graphEditor1OutlineEd\" \n                -highlightAffectedCurves 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n"
+		+ "                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 0\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n"
+		+ "                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayValues 0\n                -snapTime \"integer\" \n"
+		+ "                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Time Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"clipEditorPanel\" (localizedPanelLabel(\"Trax Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Trax Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = clipEditorNameFromPanel($panelName);\n"
+		+ "            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"sequenceEditorPanel\" (localizedPanelLabel(\"Camera Sequencer\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Camera Sequencer\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = sequenceEditorNameFromPanel($panelName);\n            clipEditor -e \n                -displayValues 0\n                -snapTime \"none\" \n                -snapValue \"none\" \n                -initialized 0\n                -manageSequencer 1 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperGraphPanel\" (localizedPanelLabel(\"Hypergraph Hierarchy\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypergraph Hierarchy\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"HyperGraphEd\");\n            hyperGraph -e \n                -graphLayoutStyle \"hierarchicalLayout\" \n                -orientation \"horiz\" \n                -mergeConnections 0\n                -zoom 1\n                -animateTransition 0\n                -showRelationships 1\n                -showShapes 0\n                -showDeformers 0\n                -showExpressions 0\n                -showConstraints 0\n                -showConnectionFromSelected 0\n                -showConnectionToSelected 0\n                -showConstraintLabels 0\n                -showUnderworld 0\n                -showInvisible 0\n                -transitionFrames 1\n                -opaqueContainers 0\n                -freeform 0\n                -imagePosition 0 0 \n                -imageScale 1\n                -imageEnabled 0\n                -graphType \"DAG\" \n"
 		+ "                -heatMapDisplay 0\n                -updateSelection 1\n                -updateNodeAdded 1\n                -useDrawOverrideColor 0\n                -limitGraphTraversal -1\n                -range 0 0 \n                -iconSize \"smallIcons\" \n                -showCachedConnections 0\n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"hyperShadePanel\" (localizedPanelLabel(\"Hypershade\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Hypershade\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"visorPanel\" (localizedPanelLabel(\"Visor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Visor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n"
 		+ "\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"nodeEditorPanel\" (localizedPanelLabel(\"Node Editor\")) `;\n\tif ($nodeEditorPanelVisible || $nodeEditorWorkspaceControlOpen) {\n\t\tif (\"\" == $panelName) {\n\t\t\tif ($useSceneConfig) {\n\t\t\t\t$panelName = `scriptedPanel -unParent  -type \"nodeEditorPanel\" -l (localizedPanelLabel(\"Node Editor\")) -mbv $menusOkayInPanels `;\n\n\t\t\t$editorName = ($panelName+\"NodeEditorEd\");\n            nodeEditor -e \n                -allAttributes 0\n                -allNodes 0\n                -autoSizeNodes 1\n                -consistentNameSize 1\n                -createNodeCommand \"nodeEdCreateNodeCommand\" \n                -connectNodeOnCreation 0\n                -connectOnDrop 0\n                -copyConnectionsOnPaste 0\n                -connectionStyle \"bezier\" \n                -defaultPinnedState 0\n                -additiveGraphingMode 0\n                -settingsChangedCallback \"nodeEdSyncControls\" \n                -traversalDepthLimit -1\n                -keyPressCommand \"nodeEdKeyPressCommand\" \n"
@@ -14167,8 +14169,8 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Relationship Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"referenceEditorPanel\" (localizedPanelLabel(\"Reference Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Reference Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"componentEditorPanel\" (localizedPanelLabel(\"Component Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Component Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dynPaintScriptedPanelType\" (localizedPanelLabel(\"Paint Effects\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Paint Effects\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"scriptEditorPanel\" (localizedPanelLabel(\"Script Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Script Editor\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"profilerPanel\" (localizedPanelLabel(\"Profiler Tool\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Profiler Tool\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"contentBrowserPanel\" (localizedPanelLabel(\"Content Browser\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Content Browser\")) -mbv $menusOkayInPanels  $panelName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\tif ($useSceneConfig) {\n        string $configName = `getPanel -cwl (localizedPanelLabel(\"Current Layout\"))`;\n        if (\"\" != $configName) {\n\t\t\tpanelConfiguration -edit -label (localizedPanelLabel(\"Current Layout\")) \n\t\t\t\t-userCreated false\n\t\t\t\t-defaultImage \"vacantCell.xP:/\"\n\t\t\t\t-image \"\"\n\t\t\t\t-sc false\n\t\t\t\t-configString \"global string $gMainPane; paneLayout -e -cn \\\"single\\\" -ps 1 100 100 $gMainPane;\"\n\t\t\t\t-removeAllPanels\n\t\t\t\t-ap true\n\t\t\t\t\t(localizedPanelLabel(\"Persp View\")) \n\t\t\t\t\t\"modelPanel\"\n"
-		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1535\\n    -height 544\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
-		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1535\\n    -height 544\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"$panelName = `modelPanel -unParent -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels `;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1319\\n    -height 708\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
+		+ "\t\t\t\t\t\"modelPanel -edit -l (localizedPanelLabel(\\\"Persp View\\\")) -mbv $menusOkayInPanels  $panelName;\\n$editorName = $panelName;\\nmodelEditor -e \\n    -cam `findStartUpCamera persp` \\n    -useInteractiveMode 0\\n    -displayLights \\\"default\\\" \\n    -displayAppearance \\\"smoothShaded\\\" \\n    -activeOnly 0\\n    -ignorePanZoom 0\\n    -wireframeOnShaded 0\\n    -headsUpDisplay 1\\n    -holdOuts 1\\n    -selectionHiliteDisplay 1\\n    -useDefaultMaterial 0\\n    -bufferMode \\\"double\\\" \\n    -twoSidedLighting 0\\n    -backfaceCulling 0\\n    -xray 0\\n    -jointXray 0\\n    -activeComponentsXray 0\\n    -displayTextures 1\\n    -smoothWireframe 0\\n    -lineWidth 1\\n    -textureAnisotropic 0\\n    -textureHilight 1\\n    -textureSampling 2\\n    -textureDisplay \\\"modulate\\\" \\n    -textureMaxSize 16384\\n    -fogging 0\\n    -fogSource \\\"fragment\\\" \\n    -fogMode \\\"linear\\\" \\n    -fogStart 0\\n    -fogEnd 100\\n    -fogDensity 0.1\\n    -fogColor 0.5 0.5 0.5 1 \\n    -depthOfFieldPreview 1\\n    -maxConstantTransparency 1\\n    -rendererName \\\"vp2Renderer\\\" \\n    -objectFilterShowInHUD 1\\n    -isFiltered 0\\n    -colorResolution 256 256 \\n    -bumpResolution 512 512 \\n    -textureCompression 0\\n    -transparencyAlgorithm \\\"frontAndBackCull\\\" \\n    -transpInShadows 0\\n    -cullingOverride \\\"none\\\" \\n    -lowQualityLighting 0\\n    -maximumNumHardwareLights 1\\n    -occlusionCulling 0\\n    -shadingModel 0\\n    -useBaseRenderer 0\\n    -useReducedRenderer 0\\n    -smallObjectCulling 0\\n    -smallObjectThreshold -1 \\n    -interactiveDisableShadows 0\\n    -interactiveBackFaceCull 0\\n    -sortTransparent 1\\n    -controllers 1\\n    -nurbsCurves 1\\n    -nurbsSurfaces 1\\n    -polymeshes 1\\n    -subdivSurfaces 1\\n    -planes 1\\n    -lights 1\\n    -cameras 1\\n    -controlVertices 1\\n    -hulls 1\\n    -grid 1\\n    -imagePlane 1\\n    -joints 1\\n    -ikHandles 1\\n    -deformers 1\\n    -dynamics 1\\n    -particleInstancers 1\\n    -fluids 1\\n    -hairSystems 1\\n    -follicles 1\\n    -nCloths 1\\n    -nParticles 1\\n    -nRigids 1\\n    -dynamicConstraints 1\\n    -locators 1\\n    -manipulators 1\\n    -pluginShapes 1\\n    -dimensions 1\\n    -handles 1\\n    -pivots 1\\n    -textures 1\\n    -strokes 1\\n    -motionTrails 1\\n    -clipGhosts 1\\n    -greasePencils 1\\n    -shadows 0\\n    -captureSequenceNumber -1\\n    -width 1319\\n    -height 708\\n    -sceneRenderFilter 0\\n    $editorName;\\nmodelEditor -e -viewSelected 0 $editorName;\\nmodelEditor -e \\n    -pluginObjects \\\"gpuCacheDisplayFilter\\\" 1 \\n    $editorName\"\n"
 		+ "\t\t\t\t$configName;\n\n            setNamedPanelLayout (localizedPanelLabel(\"Current Layout\"));\n        }\n\n        panelHistory -e -clear mainPanelHistory;\n        sceneUIReplacement -clear;\n\t}\n\n\ngrid -spacing 5 -size 12 -divisions 5 -displayAxes yes -displayGridLines yes -displayDivisionLines yes -displayPerspectiveLabels no -displayOrthographicLabels no -displayAxesBold yes -perspectiveLabelPosition axis -orthographicLabelPosition edge;\nviewManip -drawCompass 0 -compassAngle 0 -frontParameters \"\" -homeParameters \"\" -selectionLockParameters \"\";\n}\n");
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
@@ -17092,8 +17094,8 @@ createNode animCurveTU -n "R_Toe_02_Ctrl_scaleZ2";
 	setAttr ".wgt" no;
 	setAttr ".ktv[0]"  1 1;
 select -ne :time1;
-	setAttr ".o" 1;
-	setAttr ".unw" 1;
+	setAttr ".o" 37;
+	setAttr ".unw" 37;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".etmr" no;
 	setAttr ".tmr" 4096;
@@ -18264,27 +18266,27 @@ connectAttr "L_01_Jnt_04.pim" "L_01_Jnt_04_parentConstraint1.cpim";
 connectAttr "L_01_Jnt_04.rp" "L_01_Jnt_04_parentConstraint1.crp";
 connectAttr "L_01_Jnt_04.rpt" "L_01_Jnt_04_parentConstraint1.crt";
 connectAttr "L_01_Jnt_04.jo" "L_01_Jnt_04_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.t" "L_01_Jnt_04_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.t" "L_01_Jnt_04_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.rp" "L_01_Jnt_04_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.rp" "L_01_Jnt_04_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.rpt" "L_01_Jnt_04_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.rpt" "L_01_Jnt_04_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.r" "L_01_Jnt_04_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.r" "L_01_Jnt_04_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.ro" "L_01_Jnt_04_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.ro" "L_01_Jnt_04_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.s" "L_01_Jnt_04_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.s" "L_01_Jnt_04_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.pm" "L_01_Jnt_04_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.pm" "L_01_Jnt_04_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "L_01_Jnt_04_parentConstraint1.w0" "L_01_Jnt_04_parentConstraint1.tg[0].tw"
 		;
 connectAttr "L_01_Jnt_04.ssc" "L_01_Jnt_04_scaleConstraint1.tsc";
 connectAttr "L_01_Jnt_04.pim" "L_01_Jnt_04_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.s" "L_01_Jnt_04_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.s" "L_01_Jnt_04_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.pm" "L_01_Jnt_04_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.pm" "L_01_Jnt_04_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "L_01_Jnt_04_scaleConstraint1.w0" "L_01_Jnt_04_scaleConstraint1.tg[0].tw"
 		;
@@ -18399,27 +18401,27 @@ connectAttr "L_02_Jnt_04.pim" "L_02_Jnt_04_parentConstraint1.cpim";
 connectAttr "L_02_Jnt_04.rp" "L_02_Jnt_04_parentConstraint1.crp";
 connectAttr "L_02_Jnt_04.rpt" "L_02_Jnt_04_parentConstraint1.crt";
 connectAttr "L_02_Jnt_04.jo" "L_02_Jnt_04_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.t" "L_02_Jnt_04_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.t" "L_02_Jnt_04_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.rp" "L_02_Jnt_04_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.rp" "L_02_Jnt_04_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.rpt" "L_02_Jnt_04_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.rpt" "L_02_Jnt_04_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.r" "L_02_Jnt_04_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.r" "L_02_Jnt_04_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.ro" "L_02_Jnt_04_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.ro" "L_02_Jnt_04_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.s" "L_02_Jnt_04_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.s" "L_02_Jnt_04_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.pm" "L_02_Jnt_04_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.pm" "L_02_Jnt_04_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "L_02_Jnt_04_parentConstraint1.w0" "L_02_Jnt_04_parentConstraint1.tg[0].tw"
 		;
 connectAttr "L_02_Jnt_04.ssc" "L_02_Jnt_04_scaleConstraint1.tsc";
 connectAttr "L_02_Jnt_04.pim" "L_02_Jnt_04_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.s" "L_02_Jnt_04_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.s" "L_02_Jnt_04_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.pm" "L_02_Jnt_04_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.pm" "L_02_Jnt_04_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "L_02_Jnt_04_scaleConstraint1.w0" "L_02_Jnt_04_scaleConstraint1.tg[0].tw"
 		;
@@ -18438,27 +18440,27 @@ connectAttr "L_02_Jnt_05.pim" "L_02_Jnt_05_parentConstraint1.cpim";
 connectAttr "L_02_Jnt_05.rp" "L_02_Jnt_05_parentConstraint1.crp";
 connectAttr "L_02_Jnt_05.rpt" "L_02_Jnt_05_parentConstraint1.crt";
 connectAttr "L_02_Jnt_05.jo" "L_02_Jnt_05_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.t" "L_02_Jnt_05_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.t" "L_02_Jnt_05_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.rp" "L_02_Jnt_05_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.rp" "L_02_Jnt_05_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.rpt" "L_02_Jnt_05_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.rpt" "L_02_Jnt_05_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.r" "L_02_Jnt_05_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.r" "L_02_Jnt_05_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.ro" "L_02_Jnt_05_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.ro" "L_02_Jnt_05_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.s" "L_02_Jnt_05_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.s" "L_02_Jnt_05_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.pm" "L_02_Jnt_05_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.pm" "L_02_Jnt_05_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "L_02_Jnt_05_parentConstraint1.w0" "L_02_Jnt_05_parentConstraint1.tg[0].tw"
 		;
 connectAttr "L_02_Jnt_05.ssc" "L_02_Jnt_05_scaleConstraint1.tsc";
 connectAttr "L_02_Jnt_05.pim" "L_02_Jnt_05_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.s" "L_02_Jnt_05_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.s" "L_02_Jnt_05_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.pm" "L_02_Jnt_05_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.pm" "L_02_Jnt_05_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "L_02_Jnt_05_scaleConstraint1.w0" "L_02_Jnt_05_scaleConstraint1.tg[0].tw"
 		;
@@ -18477,27 +18479,27 @@ connectAttr "L_02_Jnt_06.pim" "L_02_Jnt_06_parentConstraint1.cpim";
 connectAttr "L_02_Jnt_06.rp" "L_02_Jnt_06_parentConstraint1.crp";
 connectAttr "L_02_Jnt_06.rpt" "L_02_Jnt_06_parentConstraint1.crt";
 connectAttr "L_02_Jnt_06.jo" "L_02_Jnt_06_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.t" "L_02_Jnt_06_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.t" "L_02_Jnt_06_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.rp" "L_02_Jnt_06_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.rp" "L_02_Jnt_06_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.rpt" "L_02_Jnt_06_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.rpt" "L_02_Jnt_06_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.r" "L_02_Jnt_06_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.r" "L_02_Jnt_06_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.ro" "L_02_Jnt_06_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.ro" "L_02_Jnt_06_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.s" "L_02_Jnt_06_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.s" "L_02_Jnt_06_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.pm" "L_02_Jnt_06_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.pm" "L_02_Jnt_06_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "L_02_Jnt_06_parentConstraint1.w0" "L_02_Jnt_06_parentConstraint1.tg[0].tw"
 		;
 connectAttr "L_02_Jnt_06.ssc" "L_02_Jnt_06_scaleConstraint1.tsc";
 connectAttr "L_02_Jnt_06.pim" "L_02_Jnt_06_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.s" "L_02_Jnt_06_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.s" "L_02_Jnt_06_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.pm" "L_02_Jnt_06_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.pm" "L_02_Jnt_06_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "L_02_Jnt_06_scaleConstraint1.w0" "L_02_Jnt_06_scaleConstraint1.tg[0].tw"
 		;
@@ -18552,27 +18554,27 @@ connectAttr "L_03_Jnt_04.pim" "L_03_Jnt_04_parentConstraint1.cpim";
 connectAttr "L_03_Jnt_04.rp" "L_03_Jnt_04_parentConstraint1.crp";
 connectAttr "L_03_Jnt_04.rpt" "L_03_Jnt_04_parentConstraint1.crt";
 connectAttr "L_03_Jnt_04.jo" "L_03_Jnt_04_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.t" "L_03_Jnt_04_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.t" "L_03_Jnt_04_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.rp" "L_03_Jnt_04_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.rp" "L_03_Jnt_04_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.rpt" "L_03_Jnt_04_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.rpt" "L_03_Jnt_04_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.r" "L_03_Jnt_04_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.r" "L_03_Jnt_04_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.ro" "L_03_Jnt_04_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.ro" "L_03_Jnt_04_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.s" "L_03_Jnt_04_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.s" "L_03_Jnt_04_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.pm" "L_03_Jnt_04_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.pm" "L_03_Jnt_04_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "L_03_Jnt_04_parentConstraint1.w0" "L_03_Jnt_04_parentConstraint1.tg[0].tw"
 		;
 connectAttr "L_03_Jnt_04.ssc" "L_03_Jnt_04_scaleConstraint1.tsc";
 connectAttr "L_03_Jnt_04.pim" "L_03_Jnt_04_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.s" "L_03_Jnt_04_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.s" "L_03_Jnt_04_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.pm" "L_03_Jnt_04_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.pm" "L_03_Jnt_04_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "L_03_Jnt_04_scaleConstraint1.w0" "L_03_Jnt_04_scaleConstraint1.tg[0].tw"
 		;
@@ -18591,27 +18593,27 @@ connectAttr "L_03_Jnt_05.pim" "L_03_Jnt_05_parentConstraint1.cpim";
 connectAttr "L_03_Jnt_05.rp" "L_03_Jnt_05_parentConstraint1.crp";
 connectAttr "L_03_Jnt_05.rpt" "L_03_Jnt_05_parentConstraint1.crt";
 connectAttr "L_03_Jnt_05.jo" "L_03_Jnt_05_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.t" "L_03_Jnt_05_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.t" "L_03_Jnt_05_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.rp" "L_03_Jnt_05_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.rp" "L_03_Jnt_05_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.rpt" "L_03_Jnt_05_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.rpt" "L_03_Jnt_05_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.r" "L_03_Jnt_05_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.r" "L_03_Jnt_05_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.ro" "L_03_Jnt_05_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.ro" "L_03_Jnt_05_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.s" "L_03_Jnt_05_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.s" "L_03_Jnt_05_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.pm" "L_03_Jnt_05_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.pm" "L_03_Jnt_05_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "L_03_Jnt_05_parentConstraint1.w0" "L_03_Jnt_05_parentConstraint1.tg[0].tw"
 		;
 connectAttr "L_03_Jnt_05.ssc" "L_03_Jnt_05_scaleConstraint1.tsc";
 connectAttr "L_03_Jnt_05.pim" "L_03_Jnt_05_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.s" "L_03_Jnt_05_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.s" "L_03_Jnt_05_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.pm" "L_03_Jnt_05_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.pm" "L_03_Jnt_05_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "L_03_Jnt_05_scaleConstraint1.w0" "L_03_Jnt_05_scaleConstraint1.tg[0].tw"
 		;
@@ -18630,27 +18632,27 @@ connectAttr "L_03_Jnt_06.pim" "L_03_Jnt_06_parentConstraint1.cpim";
 connectAttr "L_03_Jnt_06.rp" "L_03_Jnt_06_parentConstraint1.crp";
 connectAttr "L_03_Jnt_06.rpt" "L_03_Jnt_06_parentConstraint1.crt";
 connectAttr "L_03_Jnt_06.jo" "L_03_Jnt_06_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.t" "L_03_Jnt_06_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.t" "L_03_Jnt_06_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.rp" "L_03_Jnt_06_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.rp" "L_03_Jnt_06_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.rpt" "L_03_Jnt_06_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.rpt" "L_03_Jnt_06_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.r" "L_03_Jnt_06_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.r" "L_03_Jnt_06_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.ro" "L_03_Jnt_06_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.ro" "L_03_Jnt_06_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.s" "L_03_Jnt_06_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.s" "L_03_Jnt_06_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.pm" "L_03_Jnt_06_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.pm" "L_03_Jnt_06_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "L_03_Jnt_06_parentConstraint1.w0" "L_03_Jnt_06_parentConstraint1.tg[0].tw"
 		;
 connectAttr "L_03_Jnt_06.ssc" "L_03_Jnt_06_scaleConstraint1.tsc";
 connectAttr "L_03_Jnt_06.pim" "L_03_Jnt_06_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.s" "L_03_Jnt_06_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.s" "L_03_Jnt_06_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.pm" "L_03_Jnt_06_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.pm" "L_03_Jnt_06_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "L_03_Jnt_06_scaleConstraint1.w0" "L_03_Jnt_06_scaleConstraint1.tg[0].tw"
 		;
@@ -18705,27 +18707,27 @@ connectAttr "R_01_Jnt_04.pim" "R_01_Jnt_04_parentConstraint1.cpim";
 connectAttr "R_01_Jnt_04.rp" "R_01_Jnt_04_parentConstraint1.crp";
 connectAttr "R_01_Jnt_04.rpt" "R_01_Jnt_04_parentConstraint1.crt";
 connectAttr "R_01_Jnt_04.jo" "R_01_Jnt_04_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.t" "R_01_Jnt_04_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.t" "R_01_Jnt_04_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.rp" "R_01_Jnt_04_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.rp" "R_01_Jnt_04_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.rpt" "R_01_Jnt_04_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.rpt" "R_01_Jnt_04_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.r" "R_01_Jnt_04_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.r" "R_01_Jnt_04_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.ro" "R_01_Jnt_04_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.ro" "R_01_Jnt_04_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.s" "R_01_Jnt_04_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.s" "R_01_Jnt_04_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.pm" "R_01_Jnt_04_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.pm" "R_01_Jnt_04_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "R_01_Jnt_04_parentConstraint1.w0" "R_01_Jnt_04_parentConstraint1.tg[0].tw"
 		;
 connectAttr "R_01_Jnt_04.ssc" "R_01_Jnt_04_scaleConstraint1.tsc";
 connectAttr "R_01_Jnt_04.pim" "R_01_Jnt_04_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.s" "R_01_Jnt_04_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.s" "R_01_Jnt_04_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.pm" "R_01_Jnt_04_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.pm" "R_01_Jnt_04_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "R_01_Jnt_04_scaleConstraint1.w0" "R_01_Jnt_04_scaleConstraint1.tg[0].tw"
 		;
@@ -18744,27 +18746,27 @@ connectAttr "R_01_Jnt_05.pim" "R_01_Jnt_05_parentConstraint1.cpim";
 connectAttr "R_01_Jnt_05.rp" "R_01_Jnt_05_parentConstraint1.crp";
 connectAttr "R_01_Jnt_05.rpt" "R_01_Jnt_05_parentConstraint1.crt";
 connectAttr "R_01_Jnt_05.jo" "R_01_Jnt_05_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.t" "R_01_Jnt_05_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.t" "R_01_Jnt_05_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.rp" "R_01_Jnt_05_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.rp" "R_01_Jnt_05_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.rpt" "R_01_Jnt_05_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.rpt" "R_01_Jnt_05_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.r" "R_01_Jnt_05_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.r" "R_01_Jnt_05_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.ro" "R_01_Jnt_05_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.ro" "R_01_Jnt_05_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.s" "R_01_Jnt_05_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.s" "R_01_Jnt_05_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.pm" "R_01_Jnt_05_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.pm" "R_01_Jnt_05_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "R_01_Jnt_05_parentConstraint1.w0" "R_01_Jnt_05_parentConstraint1.tg[0].tw"
 		;
 connectAttr "R_01_Jnt_05.ssc" "R_01_Jnt_05_scaleConstraint1.tsc";
 connectAttr "R_01_Jnt_05.pim" "R_01_Jnt_05_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.s" "R_01_Jnt_05_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.s" "R_01_Jnt_05_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.pm" "R_01_Jnt_05_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.pm" "R_01_Jnt_05_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "R_01_Jnt_05_scaleConstraint1.w0" "R_01_Jnt_05_scaleConstraint1.tg[0].tw"
 		;
@@ -18783,27 +18785,27 @@ connectAttr "R_01_Jnt_06.pim" "R_01_Jnt_06_parentConstraint1.cpim";
 connectAttr "R_01_Jnt_06.rp" "R_01_Jnt_06_parentConstraint1.crp";
 connectAttr "R_01_Jnt_06.rpt" "R_01_Jnt_06_parentConstraint1.crt";
 connectAttr "R_01_Jnt_06.jo" "R_01_Jnt_06_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.t" "R_01_Jnt_06_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.t" "R_01_Jnt_06_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.rp" "R_01_Jnt_06_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.rp" "R_01_Jnt_06_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.rpt" "R_01_Jnt_06_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.rpt" "R_01_Jnt_06_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.r" "R_01_Jnt_06_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.r" "R_01_Jnt_06_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.ro" "R_01_Jnt_06_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.ro" "R_01_Jnt_06_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.s" "R_01_Jnt_06_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.s" "R_01_Jnt_06_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.pm" "R_01_Jnt_06_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.pm" "R_01_Jnt_06_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "R_01_Jnt_06_parentConstraint1.w0" "R_01_Jnt_06_parentConstraint1.tg[0].tw"
 		;
 connectAttr "R_01_Jnt_06.ssc" "R_01_Jnt_06_scaleConstraint1.tsc";
 connectAttr "R_01_Jnt_06.pim" "R_01_Jnt_06_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.s" "R_01_Jnt_06_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.s" "R_01_Jnt_06_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.pm" "R_01_Jnt_06_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.pm" "R_01_Jnt_06_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "R_01_Jnt_06_scaleConstraint1.w0" "R_01_Jnt_06_scaleConstraint1.tg[0].tw"
 		;
@@ -18858,27 +18860,27 @@ connectAttr "R_02_Jnt_04.pim" "R_02_Jnt_04_parentConstraint1.cpim";
 connectAttr "R_02_Jnt_04.rp" "R_02_Jnt_04_parentConstraint1.crp";
 connectAttr "R_02_Jnt_04.rpt" "R_02_Jnt_04_parentConstraint1.crt";
 connectAttr "R_02_Jnt_04.jo" "R_02_Jnt_04_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.t" "R_02_Jnt_04_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.t" "R_02_Jnt_04_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.rp" "R_02_Jnt_04_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.rp" "R_02_Jnt_04_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.rpt" "R_02_Jnt_04_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.rpt" "R_02_Jnt_04_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.r" "R_02_Jnt_04_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.r" "R_02_Jnt_04_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.ro" "R_02_Jnt_04_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.ro" "R_02_Jnt_04_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.s" "R_02_Jnt_04_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.s" "R_02_Jnt_04_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.pm" "R_02_Jnt_04_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.pm" "R_02_Jnt_04_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "R_02_Jnt_04_parentConstraint1.w0" "R_02_Jnt_04_parentConstraint1.tg[0].tw"
 		;
 connectAttr "R_02_Jnt_04.ssc" "R_02_Jnt_04_scaleConstraint1.tsc";
 connectAttr "R_02_Jnt_04.pim" "R_02_Jnt_04_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.s" "R_02_Jnt_04_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.s" "R_02_Jnt_04_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.pm" "R_02_Jnt_04_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.pm" "R_02_Jnt_04_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "R_02_Jnt_04_scaleConstraint1.w0" "R_02_Jnt_04_scaleConstraint1.tg[0].tw"
 		;
@@ -18897,27 +18899,27 @@ connectAttr "R_02_Jnt_05.pim" "R_02_Jnt_05_parentConstraint1.cpim";
 connectAttr "R_02_Jnt_05.rp" "R_02_Jnt_05_parentConstraint1.crp";
 connectAttr "R_02_Jnt_05.rpt" "R_02_Jnt_05_parentConstraint1.crt";
 connectAttr "R_02_Jnt_05.jo" "R_02_Jnt_05_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.t" "R_02_Jnt_05_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.t" "R_02_Jnt_05_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.rp" "R_02_Jnt_05_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.rp" "R_02_Jnt_05_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.rpt" "R_02_Jnt_05_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.rpt" "R_02_Jnt_05_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.r" "R_02_Jnt_05_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.r" "R_02_Jnt_05_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.ro" "R_02_Jnt_05_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.ro" "R_02_Jnt_05_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.s" "R_02_Jnt_05_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.s" "R_02_Jnt_05_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.pm" "R_02_Jnt_05_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.pm" "R_02_Jnt_05_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "R_02_Jnt_05_parentConstraint1.w0" "R_02_Jnt_05_parentConstraint1.tg[0].tw"
 		;
 connectAttr "R_02_Jnt_05.ssc" "R_02_Jnt_05_scaleConstraint1.tsc";
 connectAttr "R_02_Jnt_05.pim" "R_02_Jnt_05_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.s" "R_02_Jnt_05_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.s" "R_02_Jnt_05_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.pm" "R_02_Jnt_05_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.pm" "R_02_Jnt_05_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "R_02_Jnt_05_scaleConstraint1.w0" "R_02_Jnt_05_scaleConstraint1.tg[0].tw"
 		;
@@ -18936,27 +18938,27 @@ connectAttr "R_02_Jnt_06.pim" "R_02_Jnt_06_parentConstraint1.cpim";
 connectAttr "R_02_Jnt_06.rp" "R_02_Jnt_06_parentConstraint1.crp";
 connectAttr "R_02_Jnt_06.rpt" "R_02_Jnt_06_parentConstraint1.crt";
 connectAttr "R_02_Jnt_06.jo" "R_02_Jnt_06_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.t" "R_02_Jnt_06_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.t" "R_02_Jnt_06_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.rp" "R_02_Jnt_06_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.rp" "R_02_Jnt_06_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.rpt" "R_02_Jnt_06_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.rpt" "R_02_Jnt_06_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.r" "R_02_Jnt_06_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.r" "R_02_Jnt_06_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.ro" "R_02_Jnt_06_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.ro" "R_02_Jnt_06_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.s" "R_02_Jnt_06_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.s" "R_02_Jnt_06_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.pm" "R_02_Jnt_06_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.pm" "R_02_Jnt_06_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "R_02_Jnt_06_parentConstraint1.w0" "R_02_Jnt_06_parentConstraint1.tg[0].tw"
 		;
 connectAttr "R_02_Jnt_06.ssc" "R_02_Jnt_06_scaleConstraint1.tsc";
 connectAttr "R_02_Jnt_06.pim" "R_02_Jnt_06_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.s" "R_02_Jnt_06_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.s" "R_02_Jnt_06_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.pm" "R_02_Jnt_06_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.pm" "R_02_Jnt_06_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "R_02_Jnt_06_scaleConstraint1.w0" "R_02_Jnt_06_scaleConstraint1.tg[0].tw"
 		;
@@ -19011,27 +19013,27 @@ connectAttr "R_03_Jnt_04.pim" "R_03_Jnt_04_parentConstraint1.cpim";
 connectAttr "R_03_Jnt_04.rp" "R_03_Jnt_04_parentConstraint1.crp";
 connectAttr "R_03_Jnt_04.rpt" "R_03_Jnt_04_parentConstraint1.crt";
 connectAttr "R_03_Jnt_04.jo" "R_03_Jnt_04_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.t" "R_03_Jnt_04_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.t" "R_03_Jnt_04_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.rp" "R_03_Jnt_04_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.rp" "R_03_Jnt_04_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.rpt" "R_03_Jnt_04_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.rpt" "R_03_Jnt_04_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.r" "R_03_Jnt_04_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.r" "R_03_Jnt_04_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.ro" "R_03_Jnt_04_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.ro" "R_03_Jnt_04_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.s" "R_03_Jnt_04_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.s" "R_03_Jnt_04_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.pm" "R_03_Jnt_04_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.pm" "R_03_Jnt_04_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "R_03_Jnt_04_parentConstraint1.w0" "R_03_Jnt_04_parentConstraint1.tg[0].tw"
 		;
 connectAttr "R_03_Jnt_04.ssc" "R_03_Jnt_04_scaleConstraint1.tsc";
 connectAttr "R_03_Jnt_04.pim" "R_03_Jnt_04_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.s" "R_03_Jnt_04_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.s" "R_03_Jnt_04_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.pm" "R_03_Jnt_04_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.pm" "R_03_Jnt_04_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "R_03_Jnt_04_scaleConstraint1.w0" "R_03_Jnt_04_scaleConstraint1.tg[0].tw"
 		;
@@ -19050,27 +19052,27 @@ connectAttr "R_03_Jnt_05.pim" "R_03_Jnt_05_parentConstraint1.cpim";
 connectAttr "R_03_Jnt_05.rp" "R_03_Jnt_05_parentConstraint1.crp";
 connectAttr "R_03_Jnt_05.rpt" "R_03_Jnt_05_parentConstraint1.crt";
 connectAttr "R_03_Jnt_05.jo" "R_03_Jnt_05_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.t" "R_03_Jnt_05_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.t" "R_03_Jnt_05_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.rp" "R_03_Jnt_05_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.rp" "R_03_Jnt_05_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.rpt" "R_03_Jnt_05_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.rpt" "R_03_Jnt_05_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.r" "R_03_Jnt_05_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.r" "R_03_Jnt_05_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.ro" "R_03_Jnt_05_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.ro" "R_03_Jnt_05_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.s" "R_03_Jnt_05_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.s" "R_03_Jnt_05_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.pm" "R_03_Jnt_05_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.pm" "R_03_Jnt_05_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "R_03_Jnt_05_parentConstraint1.w0" "R_03_Jnt_05_parentConstraint1.tg[0].tw"
 		;
 connectAttr "R_03_Jnt_05.ssc" "R_03_Jnt_05_scaleConstraint1.tsc";
 connectAttr "R_03_Jnt_05.pim" "R_03_Jnt_05_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.s" "R_03_Jnt_05_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.s" "R_03_Jnt_05_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.pm" "R_03_Jnt_05_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.pm" "R_03_Jnt_05_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "R_03_Jnt_05_scaleConstraint1.w0" "R_03_Jnt_05_scaleConstraint1.tg[0].tw"
 		;
@@ -19089,27 +19091,27 @@ connectAttr "R_03_Jnt_06.pim" "R_03_Jnt_06_parentConstraint1.cpim";
 connectAttr "R_03_Jnt_06.rp" "R_03_Jnt_06_parentConstraint1.crp";
 connectAttr "R_03_Jnt_06.rpt" "R_03_Jnt_06_parentConstraint1.crt";
 connectAttr "R_03_Jnt_06.jo" "R_03_Jnt_06_parentConstraint1.cjo";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.t" "R_03_Jnt_06_parentConstraint1.tg[0].tt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.t" "R_03_Jnt_06_parentConstraint1.tg[0].tt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.rp" "R_03_Jnt_06_parentConstraint1.tg[0].trp"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.rp" "R_03_Jnt_06_parentConstraint1.tg[0].trp"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.rpt" "R_03_Jnt_06_parentConstraint1.tg[0].trt"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.rpt" "R_03_Jnt_06_parentConstraint1.tg[0].trt"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.r" "R_03_Jnt_06_parentConstraint1.tg[0].tr"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.r" "R_03_Jnt_06_parentConstraint1.tg[0].tr"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.ro" "R_03_Jnt_06_parentConstraint1.tg[0].tro"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.ro" "R_03_Jnt_06_parentConstraint1.tg[0].tro"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.s" "R_03_Jnt_06_parentConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.s" "R_03_Jnt_06_parentConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.pm" "R_03_Jnt_06_parentConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.pm" "R_03_Jnt_06_parentConstraint1.tg[0].tpm"
 		;
 connectAttr "R_03_Jnt_06_parentConstraint1.w0" "R_03_Jnt_06_parentConstraint1.tg[0].tw"
 		;
 connectAttr "R_03_Jnt_06.ssc" "R_03_Jnt_06_scaleConstraint1.tsc";
 connectAttr "R_03_Jnt_06.pim" "R_03_Jnt_06_scaleConstraint1.cpim";
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.s" "R_03_Jnt_06_scaleConstraint1.tg[0].ts"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.s" "R_03_Jnt_06_scaleConstraint1.tg[0].ts"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.pm" "R_03_Jnt_06_scaleConstraint1.tg[0].tpm"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.pm" "R_03_Jnt_06_scaleConstraint1.tg[0].tpm"
 		;
 connectAttr "R_03_Jnt_06_scaleConstraint1.w0" "R_03_Jnt_06_scaleConstraint1.tg[0].tw"
 		;
@@ -19215,83 +19217,83 @@ connectAttr "L_01_IK_Ctrl_scaleX.o" "L_01_IK_Ctrl.sx";
 connectAttr "L_01_IK_Ctrl_scaleY.o" "L_01_IK_Ctrl.sy";
 connectAttr "L_01_IK_Ctrl_scaleZ.o" "L_01_IK_Ctrl.sz";
 connectAttr "makeNurbCircle2.oc" "L_01_IK_CtrlShape.cr";
-connectAttr "L_01_Jnt_01.msg" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.hsj"
+connectAttr "L_01_Jnt_01.msg" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.hsj"
 		;
-connectAttr "effector1.hp" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.hee"
+connectAttr "effector1.hp" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.hee"
 		;
-connectAttr "ikRPsolver.msg" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.hsv"
+connectAttr "ikRPsolver.msg" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.hsv"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.ctx" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.pvx"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.ctx" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.pvx"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.cty" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.pvy"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.cty" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.pvy"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.ctz" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.pvz"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.ctz" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.pvz"
 		;
-connectAttr "L_01_IK_Handle_visibility.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.v"
+connectAttr "L_01_IK_Handle_visibility.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.v"
 		;
-connectAttr "L_01_IK_Handle_translateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.tx"
+connectAttr "L_01_IK_Handle_translateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.tx"
 		;
-connectAttr "L_01_IK_Handle_translateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.ty"
+connectAttr "L_01_IK_Handle_translateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.ty"
 		;
-connectAttr "L_01_IK_Handle_translateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.tz"
+connectAttr "L_01_IK_Handle_translateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.tz"
 		;
-connectAttr "L_01_IK_Handle_rotateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.rx"
+connectAttr "L_01_IK_Handle_rotateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.rx"
 		;
-connectAttr "L_01_IK_Handle_rotateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.ry"
+connectAttr "L_01_IK_Handle_rotateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.ry"
 		;
-connectAttr "L_01_IK_Handle_rotateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.rz"
+connectAttr "L_01_IK_Handle_rotateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.rz"
 		;
-connectAttr "L_01_IK_Handle_scaleX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.sx"
+connectAttr "L_01_IK_Handle_scaleX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.sx"
 		;
-connectAttr "L_01_IK_Handle_scaleY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.sy"
+connectAttr "L_01_IK_Handle_scaleY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.sy"
 		;
-connectAttr "L_01_IK_Handle_scaleZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.sz"
+connectAttr "L_01_IK_Handle_scaleZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.sz"
 		;
-connectAttr "L_01_IK_Handle_offset.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.off"
+connectAttr "L_01_IK_Handle_offset.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.off"
 		;
-connectAttr "L_01_IK_Handle_roll.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.rol"
+connectAttr "L_01_IK_Handle_roll.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.rol"
 		;
-connectAttr "L_01_IK_Handle_twist.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.twi"
+connectAttr "L_01_IK_Handle_twist.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.twi"
 		;
-connectAttr "L_01_IK_Handle_ikBlend.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.ikb"
+connectAttr "L_01_IK_Handle_ikBlend.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.ikb"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.pim" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.cpim"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle.pim" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.cpim"
 		;
-connectAttr "L_01_Jnt_01.pm" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.ps"
+connectAttr "L_01_Jnt_01.pm" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.ps"
 		;
-connectAttr "L_01_Jnt_01.t" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.crp"
+connectAttr "L_01_Jnt_01.t" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.crp"
 		;
-connectAttr "L_01_IK_PV_Ctrl.t" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.tg[0].tt"
+connectAttr "L_01_IK_PV_Ctrl.t" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.tg[0].tt"
 		;
-connectAttr "L_01_IK_PV_Ctrl.rp" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.tg[0].trp"
+connectAttr "L_01_IK_PV_Ctrl.rp" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.tg[0].trp"
 		;
-connectAttr "L_01_IK_PV_Ctrl.rpt" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.tg[0].trt"
+connectAttr "L_01_IK_PV_Ctrl.rpt" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.tg[0].trt"
 		;
-connectAttr "L_01_IK_PV_Ctrl.pm" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.tg[0].tpm"
+connectAttr "L_01_IK_PV_Ctrl.pm" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.tg[0].tpm"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.w0" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.tg[0].tw"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.w0" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_IK_Handle_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "L_Toe_01_Ctrl_translateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.tx"
+connectAttr "L_Toe_01_Ctrl_translateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.tx"
 		;
-connectAttr "L_Toe_01_Ctrl_translateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.ty"
+connectAttr "L_Toe_01_Ctrl_translateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.ty"
 		;
-connectAttr "L_Toe_01_Ctrl_translateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.tz"
+connectAttr "L_Toe_01_Ctrl_translateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.tz"
 		;
-connectAttr "L_Toe_01_Ctrl_rotateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.rx"
+connectAttr "L_Toe_01_Ctrl_rotateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.rx"
 		;
-connectAttr "L_Toe_01_Ctrl_rotateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.ry"
+connectAttr "L_Toe_01_Ctrl_rotateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.ry"
 		;
-connectAttr "L_Toe_01_Ctrl_rotateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.rz"
+connectAttr "L_Toe_01_Ctrl_rotateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.rz"
 		;
-connectAttr "L_Toe_01_Ctrl_scaleX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.sx"
+connectAttr "L_Toe_01_Ctrl_scaleX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.sx"
 		;
-connectAttr "L_Toe_01_Ctrl_scaleY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.sy"
+connectAttr "L_Toe_01_Ctrl_scaleY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.sy"
 		;
-connectAttr "L_Toe_01_Ctrl_scaleZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.sz"
+connectAttr "L_Toe_01_Ctrl_scaleZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.sz"
 		;
-connectAttr "L_Toe_01_Ctrl_visibility.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.v"
+connectAttr "L_Toe_01_Ctrl_visibility.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl.v"
 		;
-connectAttr "makeNurbCircle5.oc" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl|L_Toe_01_CtrlShape.cr"
+connectAttr "makeNurbCircle5.oc" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_01_Master_IK_Grp|L_01_IK_Ctrl_Grp|L_01_IK_Ctrl|L_01_IK_Handle|L_01_Toe_01_Grp|L_Toe_01_Ctrl|L_Toe_01_CtrlShape.cr"
 		;
 connectAttr "L_01_Toe_02_Ctrl_translateX.o" "L_01_Toe_02_Ctrl.tx";
 connectAttr "L_01_Toe_02_Ctrl_translateY.o" "L_01_Toe_02_Ctrl.ty";
@@ -19343,121 +19345,121 @@ connectAttr "L_02_IK_Ctrl_rotateZ.o" "L_02_IK_Ctrl.rz";
 connectAttr "L_02_IK_Ctrl_scaleX.o" "L_02_IK_Ctrl.sx";
 connectAttr "L_02_IK_Ctrl_scaleY.o" "L_02_IK_Ctrl.sy";
 connectAttr "L_02_IK_Ctrl_scaleZ.o" "L_02_IK_Ctrl.sz";
-connectAttr "L_02_Jnt_01.msg" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.hsj"
+connectAttr "L_02_Jnt_01.msg" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.hsj"
 		;
-connectAttr "effector2.hp" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.hee"
+connectAttr "effector2.hp" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.hee"
 		;
-connectAttr "ikRPsolver.msg" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.hsv"
+connectAttr "ikRPsolver.msg" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.hsv"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.ctx" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.pvx"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.ctx" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.pvx"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.cty" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.pvy"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.cty" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.pvy"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.ctz" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.pvz"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.ctz" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.pvz"
 		;
-connectAttr "L_02_IK_Handle_visibility.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.v"
+connectAttr "L_02_IK_Handle_visibility.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.v"
 		;
-connectAttr "L_02_IK_Handle_translateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.tx"
+connectAttr "L_02_IK_Handle_translateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.tx"
 		;
-connectAttr "L_02_IK_Handle_translateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.ty"
+connectAttr "L_02_IK_Handle_translateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.ty"
 		;
-connectAttr "L_02_IK_Handle_translateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.tz"
+connectAttr "L_02_IK_Handle_translateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.tz"
 		;
-connectAttr "L_02_IK_Handle_rotateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.rx"
+connectAttr "L_02_IK_Handle_rotateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.rx"
 		;
-connectAttr "L_02_IK_Handle_rotateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.ry"
+connectAttr "L_02_IK_Handle_rotateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.ry"
 		;
-connectAttr "L_02_IK_Handle_rotateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.rz"
+connectAttr "L_02_IK_Handle_rotateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.rz"
 		;
-connectAttr "L_02_IK_Handle_scaleX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.sx"
+connectAttr "L_02_IK_Handle_scaleX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.sx"
 		;
-connectAttr "L_02_IK_Handle_scaleY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.sy"
+connectAttr "L_02_IK_Handle_scaleY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.sy"
 		;
-connectAttr "L_02_IK_Handle_scaleZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.sz"
+connectAttr "L_02_IK_Handle_scaleZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.sz"
 		;
-connectAttr "L_02_IK_Handle_offset.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.off"
+connectAttr "L_02_IK_Handle_offset.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.off"
 		;
-connectAttr "L_02_IK_Handle_roll.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.rol"
+connectAttr "L_02_IK_Handle_roll.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.rol"
 		;
-connectAttr "L_02_IK_Handle_twist.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.twi"
+connectAttr "L_02_IK_Handle_twist.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.twi"
 		;
-connectAttr "L_02_IK_Handle_ikBlend.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.ikb"
+connectAttr "L_02_IK_Handle_ikBlend.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.ikb"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.pim" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.cpim"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle.pim" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.cpim"
 		;
-connectAttr "L_02_Jnt_01.pm" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.ps"
+connectAttr "L_02_Jnt_01.pm" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.ps"
 		;
-connectAttr "L_02_Jnt_01.t" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.crp"
+connectAttr "L_02_Jnt_01.t" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.crp"
 		;
-connectAttr "L_02_PV_Ctrl.t" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.tg[0].tt"
+connectAttr "L_02_PV_Ctrl.t" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.tg[0].tt"
 		;
-connectAttr "L_02_PV_Ctrl.rp" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.tg[0].trp"
+connectAttr "L_02_PV_Ctrl.rp" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.tg[0].trp"
 		;
-connectAttr "L_02_PV_Ctrl.rpt" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.tg[0].trt"
+connectAttr "L_02_PV_Ctrl.rpt" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.tg[0].trt"
 		;
-connectAttr "L_02_PV_Ctrl.pm" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.tg[0].tpm"
+connectAttr "L_02_PV_Ctrl.pm" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.tg[0].tpm"
 		;
-connectAttr "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.w0" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.tg[0].tw"
+connectAttr "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.w0" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_IK_Handle_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "L_Toe_01_Ctrl_translateX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.tx"
+connectAttr "L_Toe_01_Ctrl_translateX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.tx"
 		;
-connectAttr "L_Toe_01_Ctrl_translateY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.ty"
+connectAttr "L_Toe_01_Ctrl_translateY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.ty"
 		;
-connectAttr "L_Toe_01_Ctrl_translateZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.tz"
+connectAttr "L_Toe_01_Ctrl_translateZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.tz"
 		;
-connectAttr "L_Toe_01_Ctrl_rotateX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.rx"
+connectAttr "L_Toe_01_Ctrl_rotateX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.rx"
 		;
-connectAttr "L_Toe_01_Ctrl_rotateY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.ry"
+connectAttr "L_Toe_01_Ctrl_rotateY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.ry"
 		;
-connectAttr "L_Toe_01_Ctrl_rotateZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.rz"
+connectAttr "L_Toe_01_Ctrl_rotateZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.rz"
 		;
-connectAttr "L_Toe_01_Ctrl_scaleX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.sx"
+connectAttr "L_Toe_01_Ctrl_scaleX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.sx"
 		;
-connectAttr "L_Toe_01_Ctrl_scaleY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.sy"
+connectAttr "L_Toe_01_Ctrl_scaleY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.sy"
 		;
-connectAttr "L_Toe_01_Ctrl_scaleZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.sz"
+connectAttr "L_Toe_01_Ctrl_scaleZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.sz"
 		;
-connectAttr "L_Toe_01_Ctrl_visibility1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.v"
+connectAttr "L_Toe_01_Ctrl_visibility1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_01_Grp|L_Toe_01_Ctrl.v"
 		;
-connectAttr "L_Toe_02_Ctrl_translateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.tx"
+connectAttr "L_Toe_02_Ctrl_translateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.tx"
 		;
-connectAttr "L_Toe_02_Ctrl_translateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.ty"
+connectAttr "L_Toe_02_Ctrl_translateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.ty"
 		;
-connectAttr "L_Toe_02_Ctrl_translateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.tz"
+connectAttr "L_Toe_02_Ctrl_translateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.tz"
 		;
-connectAttr "L_Toe_02_Ctrl_rotateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.rx"
+connectAttr "L_Toe_02_Ctrl_rotateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.rx"
 		;
-connectAttr "L_Toe_02_Ctrl_rotateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.ry"
+connectAttr "L_Toe_02_Ctrl_rotateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.ry"
 		;
-connectAttr "L_Toe_02_Ctrl_rotateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.rz"
+connectAttr "L_Toe_02_Ctrl_rotateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.rz"
 		;
-connectAttr "L_Toe_02_Ctrl_scaleX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.sx"
+connectAttr "L_Toe_02_Ctrl_scaleX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.sx"
 		;
-connectAttr "L_Toe_02_Ctrl_scaleY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.sy"
+connectAttr "L_Toe_02_Ctrl_scaleY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.sy"
 		;
-connectAttr "L_Toe_02_Ctrl_scaleZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.sz"
+connectAttr "L_Toe_02_Ctrl_scaleZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.sz"
 		;
-connectAttr "L_Toe_02_Ctrl_visibility.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.v"
+connectAttr "L_Toe_02_Ctrl_visibility.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_02_Grp|L_Toe_02_Ctrl.v"
 		;
-connectAttr "L_Toe_03_Ctrl_translateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.tx"
+connectAttr "L_Toe_03_Ctrl_translateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.tx"
 		;
-connectAttr "L_Toe_03_Ctrl_translateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.ty"
+connectAttr "L_Toe_03_Ctrl_translateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.ty"
 		;
-connectAttr "L_Toe_03_Ctrl_translateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.tz"
+connectAttr "L_Toe_03_Ctrl_translateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.tz"
 		;
-connectAttr "L_Toe_03_Ctrl_rotateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.rx"
+connectAttr "L_Toe_03_Ctrl_rotateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.rx"
 		;
-connectAttr "L_Toe_03_Ctrl_rotateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.ry"
+connectAttr "L_Toe_03_Ctrl_rotateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.ry"
 		;
-connectAttr "L_Toe_03_Ctrl_rotateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.rz"
+connectAttr "L_Toe_03_Ctrl_rotateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.rz"
 		;
-connectAttr "L_Toe_03_Ctrl_scaleX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.sx"
+connectAttr "L_Toe_03_Ctrl_scaleX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.sx"
 		;
-connectAttr "L_Toe_03_Ctrl_scaleY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.sy"
+connectAttr "L_Toe_03_Ctrl_scaleY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.sy"
 		;
-connectAttr "L_Toe_03_Ctrl_scaleZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.sz"
+connectAttr "L_Toe_03_Ctrl_scaleZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.sz"
 		;
-connectAttr "L_Toe_03_Ctrl_visibility.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.v"
+connectAttr "L_Toe_03_Ctrl_visibility.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_02_Master_IK_Grp|L_02_IK_Ctrl_Grp1|L_02_IK_Ctrl|L_02_IK_Handle|L_02_Toe_03_Grp|L_Toe_03_Ctrl.v"
 		;
 connectAttr "L_03_IK_Base_Ctrl_translateX.o" "L_03_IK_Base_Ctrl.tx";
 connectAttr "L_03_IK_Base_Ctrl_translateY.o" "L_03_IK_Base_Ctrl.ty";
@@ -19518,65 +19520,65 @@ connectAttr "L_03_PV_Ctrl.rpt" "L_03_IK_Handle_poleVectorConstraint1.tg[0].trt";
 connectAttr "L_03_PV_Ctrl.pm" "L_03_IK_Handle_poleVectorConstraint1.tg[0].tpm";
 connectAttr "L_03_IK_Handle_poleVectorConstraint1.w0" "L_03_IK_Handle_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "L_Toe_01_Ctrl_translateX2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.tx"
+connectAttr "L_Toe_01_Ctrl_translateX2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.tx"
 		;
-connectAttr "L_Toe_01_Ctrl_translateY2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.ty"
+connectAttr "L_Toe_01_Ctrl_translateY2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.ty"
 		;
-connectAttr "L_Toe_01_Ctrl_translateZ2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.tz"
+connectAttr "L_Toe_01_Ctrl_translateZ2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.tz"
 		;
-connectAttr "L_Toe_01_Ctrl_rotateX2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.rx"
+connectAttr "L_Toe_01_Ctrl_rotateX2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.rx"
 		;
-connectAttr "L_Toe_01_Ctrl_rotateY2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.ry"
+connectAttr "L_Toe_01_Ctrl_rotateY2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.ry"
 		;
-connectAttr "L_Toe_01_Ctrl_rotateZ2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.rz"
+connectAttr "L_Toe_01_Ctrl_rotateZ2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.rz"
 		;
-connectAttr "L_Toe_01_Ctrl_scaleX2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.sx"
+connectAttr "L_Toe_01_Ctrl_scaleX2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.sx"
 		;
-connectAttr "L_Toe_01_Ctrl_scaleY2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.sy"
+connectAttr "L_Toe_01_Ctrl_scaleY2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.sy"
 		;
-connectAttr "L_Toe_01_Ctrl_scaleZ2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.sz"
+connectAttr "L_Toe_01_Ctrl_scaleZ2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.sz"
 		;
-connectAttr "L_Toe_01_Ctrl_visibility2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.v"
+connectAttr "L_Toe_01_Ctrl_visibility2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_01_Grp|L_Toe_01_Ctrl.v"
 		;
-connectAttr "L_Toe_02_Ctrl_translateX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.tx"
+connectAttr "L_Toe_02_Ctrl_translateX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.tx"
 		;
-connectAttr "L_Toe_02_Ctrl_translateY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.ty"
+connectAttr "L_Toe_02_Ctrl_translateY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.ty"
 		;
-connectAttr "L_Toe_02_Ctrl_translateZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.tz"
+connectAttr "L_Toe_02_Ctrl_translateZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.tz"
 		;
-connectAttr "L_Toe_02_Ctrl_rotateX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.rx"
+connectAttr "L_Toe_02_Ctrl_rotateX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.rx"
 		;
-connectAttr "L_Toe_02_Ctrl_rotateY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.ry"
+connectAttr "L_Toe_02_Ctrl_rotateY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.ry"
 		;
-connectAttr "L_Toe_02_Ctrl_rotateZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.rz"
+connectAttr "L_Toe_02_Ctrl_rotateZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.rz"
 		;
-connectAttr "L_Toe_02_Ctrl_scaleX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.sx"
+connectAttr "L_Toe_02_Ctrl_scaleX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.sx"
 		;
-connectAttr "L_Toe_02_Ctrl_scaleY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.sy"
+connectAttr "L_Toe_02_Ctrl_scaleY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.sy"
 		;
-connectAttr "L_Toe_02_Ctrl_scaleZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.sz"
+connectAttr "L_Toe_02_Ctrl_scaleZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.sz"
 		;
-connectAttr "L_Toe_02_Ctrl_visibility1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.v"
+connectAttr "L_Toe_02_Ctrl_visibility1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_02_Grp|L_Toe_02_Ctrl.v"
 		;
-connectAttr "L_Toe_03_Ctrl_translateX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.tx"
+connectAttr "L_Toe_03_Ctrl_translateX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.tx"
 		;
-connectAttr "L_Toe_03_Ctrl_translateY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.ty"
+connectAttr "L_Toe_03_Ctrl_translateY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.ty"
 		;
-connectAttr "L_Toe_03_Ctrl_translateZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.tz"
+connectAttr "L_Toe_03_Ctrl_translateZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.tz"
 		;
-connectAttr "L_Toe_03_Ctrl_rotateX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.rx"
+connectAttr "L_Toe_03_Ctrl_rotateX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.rx"
 		;
-connectAttr "L_Toe_03_Ctrl_rotateY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.ry"
+connectAttr "L_Toe_03_Ctrl_rotateY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.ry"
 		;
-connectAttr "L_Toe_03_Ctrl_rotateZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.rz"
+connectAttr "L_Toe_03_Ctrl_rotateZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.rz"
 		;
-connectAttr "L_Toe_03_Ctrl_scaleX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.sx"
+connectAttr "L_Toe_03_Ctrl_scaleX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.sx"
 		;
-connectAttr "L_Toe_03_Ctrl_scaleY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.sy"
+connectAttr "L_Toe_03_Ctrl_scaleY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.sy"
 		;
-connectAttr "L_Toe_03_Ctrl_scaleZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.sz"
+connectAttr "L_Toe_03_Ctrl_scaleZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.sz"
 		;
-connectAttr "L_Toe_03_Ctrl_visibility1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.v"
+connectAttr "L_Toe_03_Ctrl_visibility1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|L_03_Master_IK_Grp|L_03_IK_Ctrl_Grp|L_03_IK_Ctrl|L_03_IK_Handle|L_03_Toe_03_Grp|L_Toe_03_Ctrl.v"
 		;
 connectAttr "R_01_IK_Base_Ctrl_translateX.o" "R_01_IK_Base_Ctrl.tx";
 connectAttr "R_01_IK_Base_Ctrl_translateY.o" "R_01_IK_Base_Ctrl.ty";
@@ -19637,65 +19639,65 @@ connectAttr "R_01_PV_Ctrl.rpt" "R_01_IK_Handle_poleVectorConstraint1.tg[0].trt";
 connectAttr "R_01_PV_Ctrl.pm" "R_01_IK_Handle_poleVectorConstraint1.tg[0].tpm";
 connectAttr "R_01_IK_Handle_poleVectorConstraint1.w0" "R_01_IK_Handle_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "R_Toe_01_Ctrl_translateX2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.tx"
+connectAttr "R_Toe_01_Ctrl_translateX2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.tx"
 		;
-connectAttr "R_Toe_01_Ctrl_translateY2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.ty"
+connectAttr "R_Toe_01_Ctrl_translateY2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.ty"
 		;
-connectAttr "R_Toe_01_Ctrl_translateZ2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.tz"
+connectAttr "R_Toe_01_Ctrl_translateZ2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.tz"
 		;
-connectAttr "R_Toe_01_Ctrl_rotateX2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.rx"
+connectAttr "R_Toe_01_Ctrl_rotateX2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.rx"
 		;
-connectAttr "R_Toe_01_Ctrl_rotateY2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.ry"
+connectAttr "R_Toe_01_Ctrl_rotateY2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.ry"
 		;
-connectAttr "R_Toe_01_Ctrl_rotateZ2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.rz"
+connectAttr "R_Toe_01_Ctrl_rotateZ2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.rz"
 		;
-connectAttr "R_Toe_01_Ctrl_scaleX2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.sx"
+connectAttr "R_Toe_01_Ctrl_scaleX2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.sx"
 		;
-connectAttr "R_Toe_01_Ctrl_scaleY2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.sy"
+connectAttr "R_Toe_01_Ctrl_scaleY2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.sy"
 		;
-connectAttr "R_Toe_01_Ctrl_scaleZ2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.sz"
+connectAttr "R_Toe_01_Ctrl_scaleZ2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.sz"
 		;
-connectAttr "R_Toe_01_Ctrl_visibility2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.v"
+connectAttr "R_Toe_01_Ctrl_visibility2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_01_Grp|R_Toe_01_Ctrl.v"
 		;
-connectAttr "R_Toe_02_Ctrl_translateX2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.tx"
+connectAttr "R_Toe_02_Ctrl_translateX2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.tx"
 		;
-connectAttr "R_Toe_02_Ctrl_translateY2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.ty"
+connectAttr "R_Toe_02_Ctrl_translateY2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.ty"
 		;
-connectAttr "R_Toe_02_Ctrl_translateZ2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.tz"
+connectAttr "R_Toe_02_Ctrl_translateZ2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.tz"
 		;
-connectAttr "R_Toe_02_Ctrl_rotateX2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.rx"
+connectAttr "R_Toe_02_Ctrl_rotateX2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.rx"
 		;
-connectAttr "R_Toe_02_Ctrl_rotateY2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.ry"
+connectAttr "R_Toe_02_Ctrl_rotateY2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.ry"
 		;
-connectAttr "R_Toe_02_Ctrl_rotateZ2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.rz"
+connectAttr "R_Toe_02_Ctrl_rotateZ2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.rz"
 		;
-connectAttr "R_Toe_02_Ctrl_scaleX2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.sx"
+connectAttr "R_Toe_02_Ctrl_scaleX2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.sx"
 		;
-connectAttr "R_Toe_02_Ctrl_scaleY2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.sy"
+connectAttr "R_Toe_02_Ctrl_scaleY2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.sy"
 		;
-connectAttr "R_Toe_02_Ctrl_scaleZ2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.sz"
+connectAttr "R_Toe_02_Ctrl_scaleZ2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.sz"
 		;
-connectAttr "R_Toe_02_Ctrl_visibility2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.v"
+connectAttr "R_Toe_02_Ctrl_visibility2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_02_Grp|R_Toe_02_Ctrl.v"
 		;
-connectAttr "R_Toe_03_Ctrl_translateX2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.tx"
+connectAttr "R_Toe_03_Ctrl_translateX2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.tx"
 		;
-connectAttr "R_Toe_03_Ctrl_translateY2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.ty"
+connectAttr "R_Toe_03_Ctrl_translateY2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.ty"
 		;
-connectAttr "R_Toe_03_Ctrl_translateZ2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.tz"
+connectAttr "R_Toe_03_Ctrl_translateZ2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.tz"
 		;
-connectAttr "R_Toe_03_Ctrl_rotateX2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.rx"
+connectAttr "R_Toe_03_Ctrl_rotateX2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.rx"
 		;
-connectAttr "R_Toe_03_Ctrl_rotateY2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.ry"
+connectAttr "R_Toe_03_Ctrl_rotateY2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.ry"
 		;
-connectAttr "R_Toe_03_Ctrl_rotateZ2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.rz"
+connectAttr "R_Toe_03_Ctrl_rotateZ2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.rz"
 		;
-connectAttr "R_Toe_03_Ctrl_scaleX2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.sx"
+connectAttr "R_Toe_03_Ctrl_scaleX2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.sx"
 		;
-connectAttr "R_Toe_03_Ctrl_scaleY2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.sy"
+connectAttr "R_Toe_03_Ctrl_scaleY2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.sy"
 		;
-connectAttr "R_Toe_03_Ctrl_scaleZ2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.sz"
+connectAttr "R_Toe_03_Ctrl_scaleZ2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.sz"
 		;
-connectAttr "R_Toe_03_Ctrl_visibility2.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.v"
+connectAttr "R_Toe_03_Ctrl_visibility2.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_01_Master_IK_Grp|R_01_IK_Ctrl_Grp|R_01_IK_Ctrl|R_01_IK_Handle|R_01_Toe_03_Grp|R_Toe_03_Ctrl.v"
 		;
 connectAttr "R_02_IK_Base_Ctrl_translateX.o" "R_02_IK_Base_Ctrl.tx";
 connectAttr "R_02_IK_Base_Ctrl_translateY.o" "R_02_IK_Base_Ctrl.ty";
@@ -19756,65 +19758,65 @@ connectAttr "R_02_PV_Ctrl.rpt" "R_02_IK_Handle_poleVectorConstraint1.tg[0].trt";
 connectAttr "R_02_PV_Ctrl.pm" "R_02_IK_Handle_poleVectorConstraint1.tg[0].tpm";
 connectAttr "R_02_IK_Handle_poleVectorConstraint1.w0" "R_02_IK_Handle_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "R_Toe_01_Ctrl_translateX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.tx"
+connectAttr "R_Toe_01_Ctrl_translateX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.tx"
 		;
-connectAttr "R_Toe_01_Ctrl_translateY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.ty"
+connectAttr "R_Toe_01_Ctrl_translateY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.ty"
 		;
-connectAttr "R_Toe_01_Ctrl_translateZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.tz"
+connectAttr "R_Toe_01_Ctrl_translateZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.tz"
 		;
-connectAttr "R_Toe_01_Ctrl_rotateX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.rx"
+connectAttr "R_Toe_01_Ctrl_rotateX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.rx"
 		;
-connectAttr "R_Toe_01_Ctrl_rotateY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.ry"
+connectAttr "R_Toe_01_Ctrl_rotateY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.ry"
 		;
-connectAttr "R_Toe_01_Ctrl_rotateZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.rz"
+connectAttr "R_Toe_01_Ctrl_rotateZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.rz"
 		;
-connectAttr "R_Toe_01_Ctrl_scaleX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.sx"
+connectAttr "R_Toe_01_Ctrl_scaleX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.sx"
 		;
-connectAttr "R_Toe_01_Ctrl_scaleY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.sy"
+connectAttr "R_Toe_01_Ctrl_scaleY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.sy"
 		;
-connectAttr "R_Toe_01_Ctrl_scaleZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.sz"
+connectAttr "R_Toe_01_Ctrl_scaleZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.sz"
 		;
-connectAttr "R_Toe_01_Ctrl_visibility1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.v"
+connectAttr "R_Toe_01_Ctrl_visibility1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_01_Grp|R_Toe_01_Ctrl.v"
 		;
-connectAttr "R_Toe_02_Ctrl_translateX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.tx"
+connectAttr "R_Toe_02_Ctrl_translateX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.tx"
 		;
-connectAttr "R_Toe_02_Ctrl_translateY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.ty"
+connectAttr "R_Toe_02_Ctrl_translateY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.ty"
 		;
-connectAttr "R_Toe_02_Ctrl_translateZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.tz"
+connectAttr "R_Toe_02_Ctrl_translateZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.tz"
 		;
-connectAttr "R_Toe_02_Ctrl_rotateX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.rx"
+connectAttr "R_Toe_02_Ctrl_rotateX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.rx"
 		;
-connectAttr "R_Toe_02_Ctrl_rotateY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.ry"
+connectAttr "R_Toe_02_Ctrl_rotateY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.ry"
 		;
-connectAttr "R_Toe_02_Ctrl_rotateZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.rz"
+connectAttr "R_Toe_02_Ctrl_rotateZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.rz"
 		;
-connectAttr "R_Toe_02_Ctrl_scaleX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.sx"
+connectAttr "R_Toe_02_Ctrl_scaleX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.sx"
 		;
-connectAttr "R_Toe_02_Ctrl_scaleY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.sy"
+connectAttr "R_Toe_02_Ctrl_scaleY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.sy"
 		;
-connectAttr "R_Toe_02_Ctrl_scaleZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.sz"
+connectAttr "R_Toe_02_Ctrl_scaleZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.sz"
 		;
-connectAttr "R_Toe_02_Ctrl_visibility1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.v"
+connectAttr "R_Toe_02_Ctrl_visibility1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_02_Grp|R_Toe_02_Ctrl.v"
 		;
-connectAttr "R_Toe_03_Ctrl_translateX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.tx"
+connectAttr "R_Toe_03_Ctrl_translateX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.tx"
 		;
-connectAttr "R_Toe_03_Ctrl_translateY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.ty"
+connectAttr "R_Toe_03_Ctrl_translateY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.ty"
 		;
-connectAttr "R_Toe_03_Ctrl_translateZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.tz"
+connectAttr "R_Toe_03_Ctrl_translateZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.tz"
 		;
-connectAttr "R_Toe_03_Ctrl_rotateX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.rx"
+connectAttr "R_Toe_03_Ctrl_rotateX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.rx"
 		;
-connectAttr "R_Toe_03_Ctrl_rotateY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.ry"
+connectAttr "R_Toe_03_Ctrl_rotateY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.ry"
 		;
-connectAttr "R_Toe_03_Ctrl_rotateZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.rz"
+connectAttr "R_Toe_03_Ctrl_rotateZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.rz"
 		;
-connectAttr "R_Toe_03_Ctrl_scaleX1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.sx"
+connectAttr "R_Toe_03_Ctrl_scaleX1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.sx"
 		;
-connectAttr "R_Toe_03_Ctrl_scaleY1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.sy"
+connectAttr "R_Toe_03_Ctrl_scaleY1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.sy"
 		;
-connectAttr "R_Toe_03_Ctrl_scaleZ1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.sz"
+connectAttr "R_Toe_03_Ctrl_scaleZ1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.sz"
 		;
-connectAttr "R_Toe_03_Ctrl_visibility1.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.v"
+connectAttr "R_Toe_03_Ctrl_visibility1.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_02_Master_IK_Grp|R_02_IK_Ctrl_Grp|R_02_IK_Ctrl|R_02_IK_Handle|R_02_Toe_03_Grp|R_Toe_03_Ctrl.v"
 		;
 connectAttr "R_03_IK_Base_Ctrl_translateX.o" "R_03_IK_Base_Ctrl.tx";
 connectAttr "R_03_IK_Base_Ctrl_translateY.o" "R_03_IK_Base_Ctrl.ty";
@@ -19875,65 +19877,65 @@ connectAttr "R_03_PV_Ctrl.rpt" "R_03_IK_handle_poleVectorConstraint1.tg[0].trt";
 connectAttr "R_03_PV_Ctrl.pm" "R_03_IK_handle_poleVectorConstraint1.tg[0].tpm";
 connectAttr "R_03_IK_handle_poleVectorConstraint1.w0" "R_03_IK_handle_poleVectorConstraint1.tg[0].tw"
 		;
-connectAttr "R_Toe_01_Ctrl_translateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.tx"
+connectAttr "R_Toe_01_Ctrl_translateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.tx"
 		;
-connectAttr "R_Toe_01_Ctrl_translateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.ty"
+connectAttr "R_Toe_01_Ctrl_translateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.ty"
 		;
-connectAttr "R_Toe_01_Ctrl_translateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.tz"
+connectAttr "R_Toe_01_Ctrl_translateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.tz"
 		;
-connectAttr "R_Toe_01_Ctrl_rotateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.rx"
+connectAttr "R_Toe_01_Ctrl_rotateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.rx"
 		;
-connectAttr "R_Toe_01_Ctrl_rotateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.ry"
+connectAttr "R_Toe_01_Ctrl_rotateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.ry"
 		;
-connectAttr "R_Toe_01_Ctrl_rotateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.rz"
+connectAttr "R_Toe_01_Ctrl_rotateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.rz"
 		;
-connectAttr "R_Toe_01_Ctrl_scaleX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.sx"
+connectAttr "R_Toe_01_Ctrl_scaleX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.sx"
 		;
-connectAttr "R_Toe_01_Ctrl_scaleY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.sy"
+connectAttr "R_Toe_01_Ctrl_scaleY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.sy"
 		;
-connectAttr "R_Toe_01_Ctrl_scaleZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.sz"
+connectAttr "R_Toe_01_Ctrl_scaleZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.sz"
 		;
-connectAttr "R_Toe_01_Ctrl_visibility.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.v"
+connectAttr "R_Toe_01_Ctrl_visibility.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_01_Grp|R_Toe_01_Ctrl.v"
 		;
-connectAttr "R_Toe_02_Ctrl_translateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.tx"
+connectAttr "R_Toe_02_Ctrl_translateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.tx"
 		;
-connectAttr "R_Toe_02_Ctrl_translateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.ty"
+connectAttr "R_Toe_02_Ctrl_translateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.ty"
 		;
-connectAttr "R_Toe_02_Ctrl_translateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.tz"
+connectAttr "R_Toe_02_Ctrl_translateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.tz"
 		;
-connectAttr "R_Toe_02_Ctrl_rotateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.rx"
+connectAttr "R_Toe_02_Ctrl_rotateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.rx"
 		;
-connectAttr "R_Toe_02_Ctrl_rotateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.ry"
+connectAttr "R_Toe_02_Ctrl_rotateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.ry"
 		;
-connectAttr "R_Toe_02_Ctrl_rotateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.rz"
+connectAttr "R_Toe_02_Ctrl_rotateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.rz"
 		;
-connectAttr "R_Toe_02_Ctrl_scaleX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.sx"
+connectAttr "R_Toe_02_Ctrl_scaleX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.sx"
 		;
-connectAttr "R_Toe_02_Ctrl_scaleY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.sy"
+connectAttr "R_Toe_02_Ctrl_scaleY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.sy"
 		;
-connectAttr "R_Toe_02_Ctrl_scaleZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.sz"
+connectAttr "R_Toe_02_Ctrl_scaleZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.sz"
 		;
-connectAttr "R_Toe_02_Ctrl_visibility.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.v"
+connectAttr "R_Toe_02_Ctrl_visibility.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_02_Grp|R_Toe_02_Ctrl.v"
 		;
-connectAttr "R_Toe_03_Ctrl_translateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.tx"
+connectAttr "R_Toe_03_Ctrl_translateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.tx"
 		;
-connectAttr "R_Toe_03_Ctrl_translateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.ty"
+connectAttr "R_Toe_03_Ctrl_translateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.ty"
 		;
-connectAttr "R_Toe_03_Ctrl_translateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.tz"
+connectAttr "R_Toe_03_Ctrl_translateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.tz"
 		;
-connectAttr "R_Toe_03_Ctrl_rotateX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.rx"
+connectAttr "R_Toe_03_Ctrl_rotateX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.rx"
 		;
-connectAttr "R_Toe_03_Ctrl_rotateY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.ry"
+connectAttr "R_Toe_03_Ctrl_rotateY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.ry"
 		;
-connectAttr "R_Toe_03_Ctrl_rotateZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.rz"
+connectAttr "R_Toe_03_Ctrl_rotateZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.rz"
 		;
-connectAttr "R_Toe_03_Ctrl_scaleX.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.sx"
+connectAttr "R_Toe_03_Ctrl_scaleX.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.sx"
 		;
-connectAttr "R_Toe_03_Ctrl_scaleY.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.sy"
+connectAttr "R_Toe_03_Ctrl_scaleY.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.sy"
 		;
-connectAttr "R_Toe_03_Ctrl_scaleZ.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.sz"
+connectAttr "R_Toe_03_Ctrl_scaleZ.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.sz"
 		;
-connectAttr "R_Toe_03_Ctrl_visibility.o" "|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.v"
+connectAttr "R_Toe_03_Ctrl_visibility.o" "|Spider_Bot|Controls|Transform_Ctrl_Grp|Transform_Ctrl|Root_Ctrl_Grp|Root_Ctrl|Abdomen_Ctrl_Grp|Abdomen_Ctrl|R_03_Master_IK_Grp|R_03_IK_Ctrl_Grp|R_03_IK_Ctrl|R_03_IK_handle|R_03_Toe_03_Grp|R_Toe_03_Ctrl.v"
 		;
 connectAttr "SpiderBot_Shader.oc" "SpiderBot_SG.ss";
 connectAttr "groupId122.msg" "SpiderBot_SG.gn" -na;
