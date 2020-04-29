@@ -1,6 +1,6 @@
 //Maya ASCII 2020 scene
-//Name: Link07.ma
-//Last modified: Tue, Apr 28, 2020 08:06:55 PM
+//Name: Link08.ma
+//Last modified: Tue, Apr 28, 2020 08:07:04 PM
 //Codeset: 1252
 requires maya "2020";
 requires "mtoa" "4.0.0";
@@ -11,7 +11,7 @@ fileInfo "version" "2020";
 fileInfo "cutIdentifier" "201911140446-42a737a01c";
 fileInfo "osv" "Microsoft Windows 10 Technical Preview  (Build 18363)\n";
 fileInfo "license" "student";
-fileInfo "UUID" "E679360A-4279-3364-8091-38A694FB0FC3";
+fileInfo "UUID" "DA4A4DF8-4EF0-C169-18CA-0786E760F69C";
 createNode transform -s -n "persp";
 	rename -uid "52217AF7-443B-A6EB-5611-5BA1060F79E6";
 	setAttr ".v" no;
@@ -63075,4 +63075,4 @@ connectAttr "file2.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file6.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file4.msg" ":defaultTextureList1.tx" -na;
 connectAttr "file5.msg" ":defaultTextureList1.tx" -na;
-// End of Link07.ma
+// End of Link08.ma
